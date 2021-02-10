@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/projectSettingsUpdater.xml
+/contentModel.xml
+/modules.xml
+/.idea.Flourish.iml
+# Datasource local storage ignored files
+/../../../../../../../../:\Users\bmahe\Sources\Flourish\.idea\.idea.Flourish\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
