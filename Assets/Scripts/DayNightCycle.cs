@@ -11,6 +11,10 @@ public class DayNightCycle : MonoBehaviour
     private float dayLength = 30f;
 
     [SerializeField]
+    [Tooltip("Offsets time to start the day at an expected time")]
+    private float timeOffset = 0f;
+
+    [SerializeField]
     [Range(0, 1)]
     [Tooltip("Factor to shade objects by")]
     private float shadeFactor = 0.25f;
@@ -40,7 +44,7 @@ public class DayNightCycle : MonoBehaviour
     {
         foreach (var childRenderer in _affectedChildrenInitialColorMap.Keys)
         {
-            var timeOfDay = Time.timeSinceLevelLoad % dayLength;
+            var timeOfDay = Time.timeSinceLevelLoad % dayLength + timeOffset;
             var halfDay = dayLength / 2f;
             var initialColor = _affectedChildrenInitialColorMap[childRenderer];
             var nightColor = initialColor * shadeFactor;
