@@ -17,6 +17,7 @@ namespace Plant
         private SpriteRenderer _spriteRenderer;
         private PlantType _plantType;
         private SpriteRenderer _plantSpriteRenderer;
+        private bool _mirrored;
         private const int SEEDLING = -1;
         private const int MAXStage = 5;
         private int _stage = -1;
@@ -45,12 +46,17 @@ namespace Plant
             _plantType = (PlantType) Random.Range(0, plantTypes.Length - 1);
             var plantGameObject = new GameObject(_plantType.ToString());
             plantGameObject.transform.parent = transform;
-            var potHeight = _spriteRenderer.size.y;
+            var potHeight = _spriteRenderer.sprite.rect.height / _spriteRenderer.sprite.pixelsPerUnit;
             plantGameObject.transform.localPosition = Vector2.zero + new Vector2(0, potHeight);
+            
             _plantSpriteRenderer = plantGameObject.AddComponent<SpriteRenderer>();
             _plantSpriteRenderer.sprite = GetPlantSprite();
             _plantSpriteRenderer.sortingLayerID = _spriteRenderer.sortingLayerID;
             _plantSpriteRenderer.sortingOrder = 1;
+            
+            // Cheap way to add variation to sprites
+            _mirrored = Random.Range(0, 2) == 1;
+            _plantSpriteRenderer.flipX = _mirrored;
         }
 
         private Sprite GetPlantSprite()

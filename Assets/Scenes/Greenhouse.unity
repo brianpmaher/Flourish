@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: secondsPerAge
-      value: 120
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637385, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: m_Sprite
@@ -202,7 +202,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: secondsPerAge
-      value: 120
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637385, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: m_Sprite
@@ -360,7 +360,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: secondsPerAge
-      value: 120
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637398, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: m_RootOrder
@@ -426,7 +426,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: secondsPerAge
-      value: 120
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637398, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: m_RootOrder
@@ -574,7 +574,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: secondsPerAge
-      value: 120
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637385, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: m_Sprite
@@ -726,7 +726,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: secondsPerAge
-      value: 120
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637385, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: m_Sprite
@@ -842,7 +842,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: secondsPerAge
-      value: 120
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637385, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: m_Sprite
@@ -994,7 +994,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: secondsPerAge
-      value: 120
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637385, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: m_Sprite
@@ -1064,7 +1064,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: secondsPerAge
-      value: 120
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637385, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: m_Sprite
@@ -1134,7 +1134,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: secondsPerAge
-      value: 120
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637398, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: m_RootOrder
@@ -1364,7 +1364,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: secondsPerAge
-      value: 120
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637398, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: m_RootOrder
