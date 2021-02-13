@@ -38,14 +38,19 @@ namespace Plant
         private void Update()
         {
             Age();
+            UpdatePlantSprite();
         }
 
+        /// <summary>
+        /// Initializes the plant in this script to a random plant type and places it within the container.
+        /// </summary>
         private void InitializePlant()
         {
             var plantTypes = (PlantType[]) Enum.GetValues(typeof(PlantType));
             _plantType = (PlantType) Random.Range(0, plantTypes.Length - 1);
             var plantGameObject = new GameObject(_plantType.ToString());
             plantGameObject.transform.parent = transform;
+            plantGameObject.transform.localScale = Vector3.one;
             var potHeight = _spriteRenderer.sprite.rect.height / _spriteRenderer.sprite.pixelsPerUnit;
             plantGameObject.transform.localPosition = Vector2.zero + new Vector2(0, potHeight);
             
@@ -59,6 +64,14 @@ namespace Plant
             _plantSpriteRenderer.flipX = _mirrored;
         }
 
+        /// <summary>
+        /// Gets the appropriate plant sprite for this plant based on the type of plant it is and its nutrient and water
+        /// levels.
+        /// </summary>
+        /// <returns>The plant sprite to use for the stage of this plant.</returns>
+        /// <exception cref="Exception">
+        /// Developer error for if unable to get the plant sprite based on conditions.
+        /// </exception>
         private Sprite GetPlantSprite()
         {
             if (_stage == Seedling)
@@ -77,9 +90,26 @@ namespace Plant
             throw new Exception("Unable to get plant sprite");
         }
 
+        /// <summary>
+        /// Updates this plant to the appropriate sprite.
+        /// </summary>
+        private void UpdatePlantSprite()
+        {
+            _plantSpriteRenderer.sprite = GetPlantSprite();
+        }
+
+        /// <summary>
+        /// Plant aging system.  Aging should only occur if the plant has been initially watered and had nutrients added
+        /// and will only continue to age while the plant is healthy.  Once the plant reaches the max age stage, it will
+        /// stop aging.
+        /// </summary>
         private void Age()
         {
+            // Stop aging at max age stage.
             if (_stage >= MaxStage) return;
+            
+            // Don't age if unhealthy
+            if (!isHealthy) return;
             
             _age += UnitsPerAge / secondsPerAge * Time.deltaTime;
 
@@ -87,7 +117,6 @@ namespace Plant
             
             _age = 0;
             _stage += 1;
-            _plantSpriteRenderer.sprite = GetPlantSprite();
         }
     }
 }

@@ -1,12 +1,16 @@
 ﻿using UnityEngine;
 using UnityEngine.UIElements;
 
+/// <summary>
+/// A script to make an object draggable with the mouse.
+/// </summary>
 [RequireComponent(typeof(Rigidbody2D))]
 public class Draggable : MonoBehaviour
 {
     private Camera _mainCamera;
     private Rigidbody2D _rigidbody2D;
     private bool _dragging;
+    public bool IsDragging => _dragging;
 
     private void Start()
     {
@@ -20,6 +24,7 @@ public class Draggable : MonoBehaviour
         {
             _dragging = true;
             _rigidbody2D.isKinematic = true;
+            transform.rotation = Quaternion.identity;
             _rigidbody2D.constraints = RigidbodyConstraints2D.FreezeAll;
         }
     }
@@ -40,7 +45,6 @@ public class Draggable : MonoBehaviour
         {
             Vector2 mousePosition = _mainCamera.ScreenToWorldPoint(Input.mousePosition);
             transform.position = mousePosition;
-            transform.rotation = Quaternion.identity;
         }
     }
 }
