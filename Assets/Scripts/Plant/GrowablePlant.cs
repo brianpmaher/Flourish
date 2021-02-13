@@ -18,10 +18,10 @@ namespace Plant
         private PlantType _plantType;
         private SpriteRenderer _plantSpriteRenderer;
         private bool _mirrored;
-        private const int SEEDLING = -1;
-        private const int MAXStage = 5;
+        private const int Seedling = -1;
+        private const int MaxStage = 5;
         private int _stage = -1;
-        private const float MAXAge = 100f;
+        private const float UnitsPerAge = 100f;
         private float _age = 0f;
         private float _waterLevel = 50f;
         private float _nutrientLevel = 50f;
@@ -61,7 +61,7 @@ namespace Plant
 
         private Sprite GetPlantSprite()
         {
-            if (_stage == SEEDLING)
+            if (_stage == Seedling)
             {
                 return null;
             }
@@ -79,17 +79,15 @@ namespace Plant
 
         private void Age()
         {
-            if (_stage < MAXStage)
-            {
-                _age += MAXAge / secondsPerAge * Time.deltaTime;
+            if (_stage >= MaxStage) return;
+            
+            _age += UnitsPerAge / secondsPerAge * Time.deltaTime;
 
-                if (_age >= MAXAge)
-                {
-                    _age = 0;
-                    _stage += 1;
-                    _plantSpriteRenderer.sprite = GetPlantSprite();
-                }
-            }
+            if (_age < UnitsPerAge) return;
+            
+            _age = 0;
+            _stage += 1;
+            _plantSpriteRenderer.sprite = GetPlantSprite();
         }
     }
 }
