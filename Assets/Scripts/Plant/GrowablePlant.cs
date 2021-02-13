@@ -10,7 +10,8 @@ namespace Plant
     [RequireComponent(typeof(SpriteRenderer))]
     public class GrowablePlant : MonoBehaviour
     {
-        [SerializeField] private Sprite[] healthyFlowerPlantSprites;
+        [SerializeField] private Sprite[] healthyFlowerSprites;
+        [SerializeField] private Sprite[] wiltedFlowerSprites;
         [SerializeField] private float secondsPerAge = 120f;
 
         private SpriteRenderer _spriteRenderer;
@@ -69,7 +70,7 @@ namespace Plant
             {
                 if (isHealthy)
                 {
-                    return healthyFlowerPlantSprites[_stage];
+                    return healthyFlowerSprites[_stage];
                 }
             }
 

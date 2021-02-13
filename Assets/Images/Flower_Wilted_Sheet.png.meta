@@ -1,7 +1,25 @@
 fileFormatVersion: 2
 guid: 039de408e4f068549a7a417fdfc821de
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -3568474980126724011
+    second: Flower_Wilted_0
+  - first:
+      213: -721679520939658643
+    second: Flower_Wilted_1
+  - first:
+      213: -1933584134171321059
+    second: Flower_Wilted_2
+  - first:
+      213: -1669075763019012898
+    second: Flower_Wilted_3
+  - first:
+      213: -2034719251043708919
+    second: Flower_Wilted_4
+  - first:
+      213: -8046342106208320188
+    second: Flower_Wilted_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -89,7 +107,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Flower_Wilted_0
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 66
+        width: 66
+        height: 66
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6818182}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5507da389ea3a7ec0800000000000000
+      internalID: -3568474980126724011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower_Wilted_1
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 36
+        width: 108
+        height: 114
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6052632}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d62b7b0ac441cf5f0800000000000000
+      internalID: -721679520939658643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower_Wilted_2
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 42
+        width: 114
+        height: 114
+      alignment: 9
+      pivot: {x: 0.5, y: 0.57017547}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1d136b79778a25e0800000000000000
+      internalID: -1933584134171321059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower_Wilted_3
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 36
+        width: 114
+        height: 120
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed4a90acf6046d8e0800000000000000
+      internalID: -1669075763019012898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower_Wilted_4
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 0
+        width: 132
+        height: 180
+      alignment: 9
+      pivot: {x: 0.5, y: 0.72222227}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90014ef1f9933c3e0800000000000000
+      internalID: -2034719251043708919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower_Wilted_5
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 0
+        width: 138
+        height: 174
+      alignment: 9
+      pivot: {x: 0.5, y: 0.7241379}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4454f2a5c76a55090800000000000000
+      internalID: -8046342106208320188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
