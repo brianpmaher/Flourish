@@ -96,10 +96,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthyFlowerPlantSprites:
-  - {fileID: 1244601506726568857, guid: 8ba90852bd2da0e4c9f4f598305fbbde, type: 3}
-  - {fileID: -521755459592077482, guid: 8ba90852bd2da0e4c9f4f598305fbbde, type: 3}
-  - {fileID: 2887711437314953667, guid: 8ba90852bd2da0e4c9f4f598305fbbde, type: 3}
-  - {fileID: -5443665487787368176, guid: 8ba90852bd2da0e4c9f4f598305fbbde, type: 3}
-  - {fileID: 6871837829035508405, guid: 8ba90852bd2da0e4c9f4f598305fbbde, type: 3}
-  - {fileID: 4708857334243751297, guid: 8ba90852bd2da0e4c9f4f598305fbbde, type: 3}
+  - {fileID: -2379158974372940971, guid: f01ae744170881b4a88ef0c65ca07016, type: 3}
+  - {fileID: -9031274173257203007, guid: f01ae744170881b4a88ef0c65ca07016, type: 3}
+  - {fileID: 3521824405373028907, guid: f01ae744170881b4a88ef0c65ca07016, type: 3}
+  - {fileID: -3077186201020428327, guid: f01ae744170881b4a88ef0c65ca07016, type: 3}
+  - {fileID: -8416399094565615915, guid: f01ae744170881b4a88ef0c65ca07016, type: 3}
+  - {fileID: -3389358141271136911, guid: f01ae744170881b4a88ef0c65ca07016, type: 3}
   secondsPerAge: 120
