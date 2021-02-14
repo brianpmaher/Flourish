@@ -13,6 +13,9 @@ namespace Plant
         [SerializeField] private Sprite[] healthyFlowerSprites;
         [SerializeField] private Sprite[] wiltedFlowerSprites;
         [SerializeField] private float secondsPerAge = 120f;
+        [SerializeField] private float waterDecreasePerSecond = 0.25f;
+        [SerializeField] private float waterIncreasePerParticle = 0.1f;
+        [SerializeField] private Color deadColor;
 
         private SpriteRenderer _spriteRenderer;
         private PlantType _plantType;
@@ -25,9 +28,14 @@ namespace Plant
         private float _age = 0f;
         private float _waterLevel = 50f;
         private float _nutrientLevel = 50f;
+        private bool _canStartGrowing;
 
         private bool isHealthy =>
             _waterLevel >= 40 && _waterLevel <= 60 && _nutrientLevel >= 40 && _nutrientLevel <= 60;
+
+        private bool isOverOrUnderWatered => _waterLevel < 40 || _waterLevel > 60;
+
+        private bool isDead => _waterLevel <= 0 || _waterLevel >= 100 || _nutrientLevel <= 0 || _nutrientLevel >= 100;
 
         private void Start()
         {
@@ -39,6 +47,20 @@ namespace Plant
         {
             Age();
             UpdatePlantSprite();
+        }
+
+        private void OnParticleCollision(GameObject other)
+        {
+            if (isDead) return;
+            
+            if (_stage == Seedling)
+            {
+                _canStartGrowing = true;
+                return;
+            }
+            
+            // TODO: Need to separate water from nutrients
+            _waterLevel += waterIncreasePerParticle;
         }
 
         /// <summary>
@@ -81,10 +103,8 @@ namespace Plant
             
             if (_plantType == PlantType.Flower)
             {
-                if (isHealthy)
-                {
-                    return healthyFlowerSprites[_stage];
-                }
+                if (isHealthy) return healthyFlowerSprites[_stage];
+                if (isOverOrUnderWatered) return wiltedFlowerSprites[_stage];
             }
 
             throw new Exception("Unable to get plant sprite");
@@ -105,8 +125,23 @@ namespace Plant
         /// </summary>
         private void Age()
         {
+            if (isDead)
+            {
+                _plantSpriteRenderer.color = deadColor;
+                return;
+            }
+            
+            // Don't start growing until initially watered and given nutrients.
+            if (!_canStartGrowing) return;
+            
             // Stop aging at max age stage.
             if (_stage >= MaxStage) return;
+            
+            // Decrease water level over time
+            if (_stage != Seedling)
+            {
+                _waterLevel -= waterDecreasePerSecond * Time.deltaTime;
+            }
             
             // Don't age if unhealthy
             if (!isHealthy) return;
