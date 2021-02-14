@@ -123,6 +123,7 @@ namespace Plant
             _plantSpriteRenderer.sprite = GetPlantSprite();
             if (IsDead) _plantSpriteRenderer.color = deadColor;
             if (IsOverOrUnderNutriented) _plantSpriteRenderer.color = lowOrHighNutrientColor;
+            else _plantSpriteRenderer.color = Color.white;
         }
 
         /// <summary>
