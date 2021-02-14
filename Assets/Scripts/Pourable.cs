@@ -2,17 +2,23 @@
 using UnityEngine.Scripting;
 using UnityEngine.UIElements;
 
+/// <summary>
+/// A pourable container that activates a particle system when tipping to pour.
+/// </summary>
 [RequireComponent(typeof(Draggable))]
 [RequireComponent(typeof(Rigidbody2D))]
-public class WateringCan : MonoBehaviour
+public class Pourable : MonoBehaviour
 {
     [SerializeField]
     [RequiredMember]
-    private ParticleSystem waterParticleSystem;
+    private ParticleSystem pourParticleSystem;
 
     [SerializeField]
     [RequiredMember]
-    private Transform waterSpout;
+    private Transform spout;
+
+    [SerializeField]
+    private float pourAngle = 45f;
 
     private Draggable _draggable;
     private Rigidbody2D _rigidbody2D;
@@ -22,7 +28,7 @@ public class WateringCan : MonoBehaviour
     {
         _draggable = GetComponent<Draggable>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
-        var emissionModule = waterParticleSystem.emission;
+        var emissionModule = pourParticleSystem.emission;
         emissionModule.enabled = false;
     }
 
@@ -33,21 +39,21 @@ public class WateringCan : MonoBehaviour
             _tipping = true;
             // TODO: Kind of a hack since the draggable freezes both to stop any rotation the object may have had.
             _rigidbody2D.constraints = RigidbodyConstraints2D.FreezePosition;
-            transform.rotation = Quaternion.Euler(0, 0, 45);
-            waterParticleSystem.transform.position = waterSpout.position;
-            var emissionModule = waterParticleSystem.emission;
+            transform.rotation = Quaternion.Euler(0, 0, pourAngle);
+            pourParticleSystem.transform.position = spout.position;
+            var emissionModule = pourParticleSystem.emission;
             emissionModule.enabled = true;
         }
         else if (_tipping)
         {
-            waterParticleSystem.transform.position = waterSpout.position;
+            pourParticleSystem.transform.position = spout.position;
         }
         
         if (_tipping && Input.GetMouseButtonUp((int) MouseButton.RightMouse) || _tipping && !_draggable.IsDragging)
         {
             _tipping = false;
             transform.rotation = Quaternion.identity;
-            var emissionModule = waterParticleSystem.emission;
+            var emissionModule = pourParticleSystem.emission;
             emissionModule.enabled = false;
         }
     }

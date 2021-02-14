@@ -2,7 +2,7 @@
 using UnityEngine.UIElements;
 
 /// <summary>
-/// A script to make an object draggable with the mouse.
+/// A object that is draggable with the mouse.
 /// </summary>
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Collider2D))]

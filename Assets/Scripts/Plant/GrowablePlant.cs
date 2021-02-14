@@ -30,12 +30,10 @@ namespace Plant
         private float _nutrientLevel = 50f;
         private bool _canStartGrowing;
 
-        private bool isHealthy =>
+        private bool IsHealthy =>
             _waterLevel >= 33 && _waterLevel <= 67 && _nutrientLevel >= 33 && _nutrientLevel <= 67;
-
-        private bool isOverOrUnderWatered => _waterLevel < 33 || _waterLevel > 67;
-
-        private bool isDead => _waterLevel <= 0 || _waterLevel >= 100 || _nutrientLevel <= 0 || _nutrientLevel >= 100;
+        private bool IsOverOrUnderWatered => _waterLevel < 33 || _waterLevel > 67;
+        private bool IsDead => _waterLevel <= 0 || _waterLevel >= 100 || _nutrientLevel <= 0 || _nutrientLevel >= 100;
 
         private void Start()
         {
@@ -52,7 +50,7 @@ namespace Plant
         
         private void OnParticleCollision(GameObject other)
         {
-            if (isDead) return;
+            if (IsDead) return;
             
             if (_stage == Seedling)
             {
@@ -104,8 +102,8 @@ namespace Plant
             
             if (_plantType == PlantType.Flower)
             {
-                if (isHealthy) return healthyFlowerSprites[_stage];
-                if (isOverOrUnderWatered) return wiltedFlowerSprites[_stage];
+                if (IsHealthy) return healthyFlowerSprites[_stage];
+                if (IsOverOrUnderWatered) return wiltedFlowerSprites[_stage];
             }
 
             throw new Exception("Unable to get plant sprite");
@@ -117,7 +115,7 @@ namespace Plant
         private void UpdatePlantSprite()
         {
             _plantSpriteRenderer.sprite = GetPlantSprite();
-            if (isDead) _plantSpriteRenderer.color = deadColor;
+            if (IsDead) _plantSpriteRenderer.color = deadColor;
         }
 
         /// <summary>
@@ -127,9 +125,9 @@ namespace Plant
         /// </summary>
         private void Age()
         {
-            if (isDead) return;
+            if (IsDead) return;
             if (!_canStartGrowing) return;
-            if (!isHealthy) return;
+            if (!IsHealthy) return;
             if (_stage >= MaxStage) return;
             
             _age += UnitsPerAge / secondsPerAge * Time.deltaTime;
@@ -144,7 +142,7 @@ namespace Plant
         /// </summary>
         private void EvaporateWater()
         {
-            if (isDead) return;
+            if (IsDead) return;
             if (_stage == Seedling) return;
             _waterLevel -= waterDecreasePerSecond * Time.deltaTime;
         }
