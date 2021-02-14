@@ -17,8 +17,8 @@ namespace Plant
         [SerializeField] private float waterIncreasePerParticle = 0.1f;
         [SerializeField] private float nutrientDecreasePerSecond = 0.25f;
         [SerializeField] private float nutrientIncreasePerParticle = 0.1f;
+        [SerializeField] private Color lowOrHighNutrientColor;
         [SerializeField] private Color deadColor;
-        [SerializeField] [Tooltip("Color when too high or low in nutrients")] private Color nutriaintColor;
 
         private SpriteRenderer _spriteRenderer;
         private PlantType _plantType;
@@ -36,7 +36,7 @@ namespace Plant
         private bool IsHealthy =>
             _waterLevel >= 33 && _waterLevel <= 67 && _nutrientLevel >= 33 && _nutrientLevel <= 67;
         private bool IsOverOrUnderWatered => _waterLevel < 33 || _waterLevel > 67;
-        private bool Nutriaint => _nutrientLevel < 33 || _nutrientLevel > 67;
+        private bool IsOverOrUnderNutriented => _nutrientLevel < 33 || _nutrientLevel > 67;
         private bool IsDead => _waterLevel <= 0 || _waterLevel >= 100 || _nutrientLevel <= 0 || _nutrientLevel >= 100;
 
         private void Start()
@@ -122,7 +122,7 @@ namespace Plant
         {
             _plantSpriteRenderer.sprite = GetPlantSprite();
             if (IsDead) _plantSpriteRenderer.color = deadColor;
-            if (Nutriaint) _plantSpriteRenderer.color = nutriaintColor;
+            if (IsOverOrUnderNutriented) _plantSpriteRenderer.color = lowOrHighNutrientColor;
         }
 
         /// <summary>
