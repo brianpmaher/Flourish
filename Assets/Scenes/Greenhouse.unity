@@ -4968,8 +4968,32 @@ PrefabInstance:
     m_TransformParent: {fileID: 1227659721}
     m_Modifications:
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.b
+      value: 0.18071377
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.g
+      value: 0.2249438
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.r
+      value: 0.2924528
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: secondsPerAge
-      value: 30
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: waterDecreasePerSecond
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: waterIncreasePerParticle
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637385, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: m_Sprite
@@ -5129,8 +5153,32 @@ PrefabInstance:
     m_TransformParent: {fileID: 1227659721}
     m_Modifications:
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.b
+      value: 0.18071377
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.g
+      value: 0.2249438
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.r
+      value: 0.2924528
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: secondsPerAge
-      value: 30
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: waterDecreasePerSecond
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: waterIncreasePerParticle
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637385, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: m_Sprite
@@ -5374,8 +5422,32 @@ PrefabInstance:
     m_TransformParent: {fileID: 1227659721}
     m_Modifications:
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.b
+      value: 0.18071377
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.g
+      value: 0.2249438
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.r
+      value: 0.2924528
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: secondsPerAge
-      value: 30
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: waterDecreasePerSecond
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: waterIncreasePerParticle
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637398, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: m_RootOrder
@@ -5453,19 +5525,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: deadColor.b
-      value: 0.008810962
+      value: 0.18071377
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: deadColor.g
-      value: 0.09459496
+      value: 0.2249438
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: deadColor.r
-      value: 0.20754719
+      value: 0.2924528
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: secondsPerAge
-      value: 30
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: waterDecreasePerSecond
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: waterIncreasePerParticle
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637398, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: m_RootOrder
@@ -5627,6 +5707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f8fb2debbd48ddb5c51e5129911a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableColliderOnDrag: 0
 --- !u!50 &908456314
 Rigidbody2D:
   serializedVersion: 4
@@ -5771,8 +5852,32 @@ PrefabInstance:
     m_TransformParent: {fileID: 1227659721}
     m_Modifications:
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.b
+      value: 0.18071377
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.g
+      value: 0.2249438
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.r
+      value: 0.2924528
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: secondsPerAge
-      value: 30
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: waterDecreasePerSecond
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: waterIncreasePerParticle
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637385, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: m_Sprite
@@ -6012,6 +6117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f8fb2debbd48ddb5c51e5129911a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableColliderOnDrag: 1
 --- !u!114 &961460491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6034,8 +6140,32 @@ PrefabInstance:
     m_TransformParent: {fileID: 1227659721}
     m_Modifications:
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.b
+      value: 0.18071377
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.g
+      value: 0.2249438
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.r
+      value: 0.2924528
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: secondsPerAge
-      value: 30
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: waterDecreasePerSecond
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: waterIncreasePerParticle
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637385, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: m_Sprite
@@ -6238,8 +6368,32 @@ PrefabInstance:
     m_TransformParent: {fileID: 1227659721}
     m_Modifications:
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.b
+      value: 0.18071377
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.g
+      value: 0.2249438
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.r
+      value: 0.2924528
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: secondsPerAge
-      value: 30
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: waterDecreasePerSecond
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: waterIncreasePerParticle
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637385, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: m_Sprite
@@ -6444,6 +6598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f8fb2debbd48ddb5c51e5129911a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableColliderOnDrag: 0
 --- !u!50 &1595329081
 Rigidbody2D:
   serializedVersion: 4
@@ -6516,8 +6671,32 @@ PrefabInstance:
     m_TransformParent: {fileID: 1227659721}
     m_Modifications:
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.b
+      value: 0.18071377
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.g
+      value: 0.2249438
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.r
+      value: 0.2924528
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: secondsPerAge
-      value: 30
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: waterDecreasePerSecond
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: waterIncreasePerParticle
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637385, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: m_Sprite
@@ -6673,8 +6852,32 @@ PrefabInstance:
     m_TransformParent: {fileID: 1227659721}
     m_Modifications:
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.b
+      value: 0.18071377
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.g
+      value: 0.2249438
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.r
+      value: 0.2924528
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: secondsPerAge
-      value: 30
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: waterDecreasePerSecond
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: waterIncreasePerParticle
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637385, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: m_Sprite
@@ -6755,8 +6958,32 @@ PrefabInstance:
     m_TransformParent: {fileID: 1227659721}
     m_Modifications:
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.b
+      value: 0.18071377
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.g
+      value: 0.2249438
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.r
+      value: 0.2924528
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: secondsPerAge
-      value: 30
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: waterDecreasePerSecond
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: waterIncreasePerParticle
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637398, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: m_RootOrder
@@ -7001,6 +7228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f8fb2debbd48ddb5c51e5129911a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableColliderOnDrag: 0
 --- !u!50 &2043934721
 Rigidbody2D:
   serializedVersion: 4
@@ -7056,8 +7284,32 @@ PrefabInstance:
     m_TransformParent: {fileID: 1227659721}
     m_Modifications:
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.b
+      value: 0.18071377
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.g
+      value: 0.2249438
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: deadColor.r
+      value: 0.2924528
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: secondsPerAge
-      value: 30
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: waterDecreasePerSecond
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: waterIncreasePerParticle
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637398, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: m_RootOrder

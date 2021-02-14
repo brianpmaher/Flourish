@@ -31,9 +31,9 @@ namespace Plant
         private bool _canStartGrowing;
 
         private bool isHealthy =>
-            _waterLevel >= 40 && _waterLevel <= 60 && _nutrientLevel >= 40 && _nutrientLevel <= 60;
+            _waterLevel >= 33 && _waterLevel <= 67 && _nutrientLevel >= 33 && _nutrientLevel <= 67;
 
-        private bool isOverOrUnderWatered => _waterLevel < 40 || _waterLevel > 60;
+        private bool isOverOrUnderWatered => _waterLevel < 33 || _waterLevel > 67;
 
         private bool isDead => _waterLevel <= 0 || _waterLevel >= 100 || _nutrientLevel <= 0 || _nutrientLevel >= 100;
 
@@ -46,9 +46,10 @@ namespace Plant
         private void Update()
         {
             Age();
+            EvaporateWater();
             UpdatePlantSprite();
         }
-
+        
         private void OnParticleCollision(GameObject other)
         {
             if (isDead) return;
@@ -116,6 +117,7 @@ namespace Plant
         private void UpdatePlantSprite()
         {
             _plantSpriteRenderer.sprite = GetPlantSprite();
+            if (isDead) _plantSpriteRenderer.color = deadColor;
         }
 
         /// <summary>
@@ -125,33 +127,26 @@ namespace Plant
         /// </summary>
         private void Age()
         {
-            if (isDead)
-            {
-                _plantSpriteRenderer.color = deadColor;
-                return;
-            }
-            
-            // Don't start growing until initially watered and given nutrients.
+            if (isDead) return;
             if (!_canStartGrowing) return;
-            
-            // Stop aging at max age stage.
+            if (!isHealthy) return;
             if (_stage >= MaxStage) return;
             
-            // Decrease water level over time
-            if (_stage != Seedling)
-            {
-                _waterLevel -= waterDecreasePerSecond * Time.deltaTime;
-            }
-            
-            // Don't age if unhealthy
-            if (!isHealthy) return;
-            
             _age += UnitsPerAge / secondsPerAge * Time.deltaTime;
-
             if (_age < UnitsPerAge) return;
             
             _age = 0;
             _stage += 1;
+        }
+
+        /// <summary>
+        /// Evaporates water level over time
+        /// </summary>
+        private void EvaporateWater()
+        {
+            if (isDead) return;
+            if (_stage == Seedling) return;
+            _waterLevel -= waterDecreasePerSecond * Time.deltaTime;
         }
     }
 }
