@@ -37,7 +37,7 @@ public class Pourable : MonoBehaviour
         if (_draggable.IsDragging && Input.GetMouseButtonDown((int) MouseButton.RightMouse))
         {
             _tipping = true;
-            // TODO: Kind of a hack since the draggable freezes both to stop any rotation the object may have had.
+            // TODO: A hack since the draggable freezes both to stop any rotation the object may have had.
             _rigidbody2D.constraints = RigidbodyConstraints2D.FreezePosition;
             transform.rotation = Quaternion.Euler(0, 0, pourAngle);
             pourParticleSystem.transform.position = spout.position;

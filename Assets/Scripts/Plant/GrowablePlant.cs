@@ -15,7 +15,10 @@ namespace Plant
         [SerializeField] private float secondsPerAge = 120f;
         [SerializeField] private float waterDecreasePerSecond = 0.25f;
         [SerializeField] private float waterIncreasePerParticle = 0.1f;
+        [SerializeField] private float nutrientDecreasePerSecond = 0.25f;
+        [SerializeField] private float nutrientIncreasePerParticle = 0.1f;
         [SerializeField] private Color deadColor;
+        [SerializeField] [Tooltip("Color when too high or low in nutrients")] private Color nutriaintColor;
 
         private SpriteRenderer _spriteRenderer;
         private PlantType _plantType;
@@ -33,6 +36,7 @@ namespace Plant
         private bool IsHealthy =>
             _waterLevel >= 33 && _waterLevel <= 67 && _nutrientLevel >= 33 && _nutrientLevel <= 67;
         private bool IsOverOrUnderWatered => _waterLevel < 33 || _waterLevel > 67;
+        private bool Nutriaint => _nutrientLevel < 33 || _nutrientLevel > 67;
         private bool IsDead => _waterLevel <= 0 || _waterLevel >= 100 || _nutrientLevel <= 0 || _nutrientLevel >= 100;
 
         private void Start()
@@ -45,6 +49,7 @@ namespace Plant
         {
             Age();
             EvaporateWater();
+            AbsorbNutrients();
             UpdatePlantSprite();
         }
         
@@ -57,9 +62,9 @@ namespace Plant
                 _canStartGrowing = true;
                 return;
             }
-            
-            // TODO: Need to separate water from nutrients
-            _waterLevel += waterIncreasePerParticle;
+
+            if (other.CompareTag("Water")) _waterLevel += waterIncreasePerParticle;
+            if (other.CompareTag("Nutrients")) _nutrientLevel += nutrientIncreasePerParticle;
         }
 
         /// <summary>
@@ -72,7 +77,8 @@ namespace Plant
             var plantGameObject = new GameObject(_plantType.ToString());
             plantGameObject.transform.parent = transform;
             plantGameObject.transform.localScale = Vector3.one;
-            var potHeight = _spriteRenderer.sprite.rect.height / _spriteRenderer.sprite.pixelsPerUnit;
+            var sprite = _spriteRenderer.sprite;
+            var potHeight = sprite.rect.height / sprite.pixelsPerUnit;
             plantGameObject.transform.localPosition = Vector2.zero + new Vector2(0, potHeight);
             
             _plantSpriteRenderer = plantGameObject.AddComponent<SpriteRenderer>();
@@ -102,8 +108,8 @@ namespace Plant
             
             if (_plantType == PlantType.Flower)
             {
-                if (IsHealthy) return healthyFlowerSprites[_stage];
                 if (IsOverOrUnderWatered) return wiltedFlowerSprites[_stage];
+                return healthyFlowerSprites[_stage];
             }
 
             throw new Exception("Unable to get plant sprite");
@@ -116,6 +122,7 @@ namespace Plant
         {
             _plantSpriteRenderer.sprite = GetPlantSprite();
             if (IsDead) _plantSpriteRenderer.color = deadColor;
+            if (Nutriaint) _plantSpriteRenderer.color = nutriaintColor;
         }
 
         /// <summary>
@@ -145,6 +152,16 @@ namespace Plant
             if (IsDead) return;
             if (_stage == Seedling) return;
             _waterLevel -= waterDecreasePerSecond * Time.deltaTime;
+        }
+        
+        /// <summary>
+        /// Decreases nutrient level over time
+        /// </summary>
+        private void AbsorbNutrients()
+        {
+            if (IsDead) return;
+            if (_stage == Seedling) return;
+            _nutrientLevel -= nutrientDecreasePerSecond * Time.deltaTime;
         }
     }
 }
