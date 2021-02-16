@@ -5095,15 +5095,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: deadColor.b
-      value: 0.18071377
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: deadColor.g
-      value: 0.2249438
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: deadColor.r
-      value: 0.2924528
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: secondsPerAge
@@ -5139,11 +5139,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: lowOrHighNutrientColor.g
-      value: 0.39090753
+      value: 0.5847953
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: lowOrHighNutrientColor.r
-      value: 0.6698113
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: waterIncreasePerParticle
@@ -5216,6 +5216,14 @@ PrefabInstance:
     - target: {fileID: 254526194175637399, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: m_TagString
       value: FlowerPot
+      objectReference: {fileID: 0}
+    - target: {fileID: 1333344295418886995, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0798156
+      objectReference: {fileID: 0}
+    - target: {fileID: 1333344295418886995, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.5399078
       objectReference: {fileID: 0}
     - target: {fileID: 1333344295418886995, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
@@ -10161,15 +10169,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: deadColor.b
-      value: 0.18071377
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: deadColor.g
-      value: 0.2249438
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: deadColor.r
-      value: 0.2924528
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: secondsPerAge
@@ -10205,11 +10213,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: lowOrHighNutrientColor.g
-      value: 0.39090753
+      value: 0.5847953
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: lowOrHighNutrientColor.r
-      value: 0.6698113
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: waterIncreasePerParticle
@@ -10470,15 +10478,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: deadColor.b
-      value: 0.18071377
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: deadColor.g
-      value: 0.2249438
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: deadColor.r
-      value: 0.2924528
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: secondsPerAge
@@ -10514,11 +10522,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: lowOrHighNutrientColor.g
-      value: 0.39090753
+      value: 0.5847953
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: lowOrHighNutrientColor.r
-      value: 0.6698113
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: waterIncreasePerParticle
@@ -10687,15 +10695,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: deadColor.b
-      value: 0.18071377
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: deadColor.g
-      value: 0.2249438
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: deadColor.r
-      value: 0.2924528
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: secondsPerAge
@@ -10731,11 +10739,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: lowOrHighNutrientColor.g
-      value: 0.39090753
+      value: 0.5847953
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: lowOrHighNutrientColor.r
-      value: 0.6698113
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: waterIncreasePerParticle
@@ -11059,15 +11067,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: deadColor.b
-      value: 0.18071377
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: deadColor.g
-      value: 0.2249438
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: deadColor.r
-      value: 0.2924528
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: secondsPerAge
@@ -11103,11 +11111,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: lowOrHighNutrientColor.g
-      value: 0.39090753
+      value: 0.5847953
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: lowOrHighNutrientColor.r
-      value: 0.6698113
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: waterIncreasePerParticle
@@ -11180,6 +11188,14 @@ PrefabInstance:
     - target: {fileID: 254526194175637399, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: m_TagString
       value: FlowerPot
+      objectReference: {fileID: 0}
+    - target: {fileID: 1333344295418886995, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0795017
+      objectReference: {fileID: 0}
+    - target: {fileID: 1333344295418886995, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.5397509
       objectReference: {fileID: 0}
     - target: {fileID: 1333344295418886995, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
@@ -11388,15 +11404,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: deadColor.b
-      value: 0.18071377
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: deadColor.g
-      value: 0.2249438
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: deadColor.r
-      value: 0.2924528
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: secondsPerAge
@@ -11432,11 +11448,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: lowOrHighNutrientColor.g
-      value: 0.39090753
+      value: 0.5847953
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: lowOrHighNutrientColor.r
-      value: 0.6698113
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: waterIncreasePerParticle
@@ -11657,15 +11673,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: deadColor.b
-      value: 0.18071377
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: deadColor.g
-      value: 0.2249438
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: deadColor.r
-      value: 0.2924528
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: secondsPerAge
@@ -11701,11 +11717,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: lowOrHighNutrientColor.g
-      value: 0.39090753
+      value: 0.5847953
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: lowOrHighNutrientColor.r
-      value: 0.6698113
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: waterIncreasePerParticle
@@ -11778,6 +11794,14 @@ PrefabInstance:
     - target: {fileID: 254526194175637399, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: m_TagString
       value: FlowerPot
+      objectReference: {fileID: 0}
+    - target: {fileID: 1333344295418886995, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0787581
+      objectReference: {fileID: 0}
+    - target: {fileID: 1333344295418886995, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.53937906
       objectReference: {fileID: 0}
     - target: {fileID: 1333344295418886995, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
@@ -12126,15 +12150,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: deadColor.b
-      value: 0.18071377
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: deadColor.g
-      value: 0.2249438
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: deadColor.r
-      value: 0.2924528
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: secondsPerAge
@@ -12170,11 +12194,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: lowOrHighNutrientColor.g
-      value: 0.39090753
+      value: 0.5847953
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: lowOrHighNutrientColor.r
-      value: 0.6698113
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: waterIncreasePerParticle
@@ -12347,15 +12371,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: deadColor.b
-      value: 0.18071377
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: deadColor.g
-      value: 0.2249438
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: deadColor.r
-      value: 0.2924528
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: secondsPerAge
@@ -12391,11 +12415,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: lowOrHighNutrientColor.g
-      value: 0.39090753
+      value: 0.5847953
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: lowOrHighNutrientColor.r
-      value: 0.6698113
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: waterIncreasePerParticle
@@ -12470,6 +12494,14 @@ PrefabInstance:
       value: FlowerPot
       objectReference: {fileID: 0}
     - target: {fileID: 1333344295418886995, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0813695
+      objectReference: {fileID: 0}
+    - target: {fileID: 1333344295418886995, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.54068476
+      objectReference: {fileID: 0}
+    - target: {fileID: 1333344295418886995, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.08
       objectReference: {fileID: 0}
@@ -12493,15 +12525,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: deadColor.b
-      value: 0.18071377
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: deadColor.g
-      value: 0.2249438
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: deadColor.r
-      value: 0.2924528
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: secondsPerAge
@@ -12537,11 +12569,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: lowOrHighNutrientColor.g
-      value: 0.39090753
+      value: 0.5847953
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: lowOrHighNutrientColor.r
-      value: 0.6698113
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: waterIncreasePerParticle
@@ -13036,15 +13068,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: deadColor.b
-      value: 0.18071377
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: deadColor.g
-      value: 0.2249438
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: deadColor.r
-      value: 0.2924528
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: secondsPerAge
@@ -13080,11 +13112,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: lowOrHighNutrientColor.g
-      value: 0.39090753
+      value: 0.5847953
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: lowOrHighNutrientColor.r
-      value: 0.6698113
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: waterIncreasePerParticle

@@ -108,7 +108,7 @@ namespace Plant
             
             if (_plantType == PlantType.Flower)
             {
-                if (IsOverOrUnderWatered) return wiltedFlowerSprites[_stage];
+                if (IsOverOrUnderWatered || IsDead) return wiltedFlowerSprites[_stage];
                 return healthyFlowerSprites[_stage];
             }
 
