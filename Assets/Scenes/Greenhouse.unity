@@ -5127,7 +5127,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: waterDecreasePerSecond
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: lowOrHighNutrientColor.a
@@ -5151,7 +5151,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: nutrientDecreasePerSecond
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: nutrientIncreasePerParticle
@@ -10201,7 +10201,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: waterDecreasePerSecond
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: lowOrHighNutrientColor.a
@@ -10225,7 +10225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: nutrientDecreasePerSecond
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: nutrientIncreasePerParticle
@@ -10510,7 +10510,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: waterDecreasePerSecond
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: lowOrHighNutrientColor.a
@@ -10534,7 +10534,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: nutrientDecreasePerSecond
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: nutrientIncreasePerParticle
@@ -10727,7 +10727,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: waterDecreasePerSecond
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: lowOrHighNutrientColor.a
@@ -10751,7 +10751,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: nutrientDecreasePerSecond
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: nutrientIncreasePerParticle
@@ -11099,7 +11099,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: waterDecreasePerSecond
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: lowOrHighNutrientColor.a
@@ -11123,7 +11123,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: nutrientDecreasePerSecond
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: nutrientIncreasePerParticle
@@ -11436,7 +11436,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: waterDecreasePerSecond
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: lowOrHighNutrientColor.a
@@ -11460,7 +11460,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: nutrientDecreasePerSecond
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: nutrientIncreasePerParticle
@@ -11705,7 +11705,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: waterDecreasePerSecond
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: lowOrHighNutrientColor.a
@@ -11729,7 +11729,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: nutrientDecreasePerSecond
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: nutrientIncreasePerParticle
@@ -12182,7 +12182,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: waterDecreasePerSecond
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: lowOrHighNutrientColor.a
@@ -12206,7 +12206,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: nutrientDecreasePerSecond
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: nutrientIncreasePerParticle
@@ -12403,7 +12403,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: waterDecreasePerSecond
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: lowOrHighNutrientColor.a
@@ -12427,7 +12427,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: nutrientDecreasePerSecond
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: nutrientIncreasePerParticle
@@ -12557,7 +12557,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: waterDecreasePerSecond
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: lowOrHighNutrientColor.a
@@ -12581,7 +12581,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: nutrientDecreasePerSecond
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: nutrientIncreasePerParticle
@@ -13100,7 +13100,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: waterDecreasePerSecond
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: lowOrHighNutrientColor.a
@@ -13124,7 +13124,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: nutrientDecreasePerSecond
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 254526194175637384, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: nutrientIncreasePerParticle

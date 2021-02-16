@@ -108,7 +108,11 @@ namespace Plant
             
             if (_plantType == PlantType.Flower)
             {
-                if (IsOverOrUnderWatered || IsDead) return wiltedFlowerSprites[_stage];
+                if (IsOverOrUnderWatered || IsDead)
+                {
+                    return wiltedFlowerSprites[_stage];
+                }
+                
                 return healthyFlowerSprites[_stage];
             }
 
@@ -121,9 +125,19 @@ namespace Plant
         private void UpdatePlantSprite()
         {
             _plantSpriteRenderer.sprite = GetPlantSprite();
-            if (IsDead) _plantSpriteRenderer.color = deadColor;
-            if (IsOverOrUnderNutriented) _plantSpriteRenderer.color = lowOrHighNutrientColor;
-            else _plantSpriteRenderer.color = Color.white;
+            
+            if (IsDead)
+            {
+                _plantSpriteRenderer.color = deadColor;
+            }
+            else if (IsOverOrUnderNutriented)
+            {
+                _plantSpriteRenderer.color = lowOrHighNutrientColor;
+            }
+            else
+            {
+                _plantSpriteRenderer.color = Color.white;
+            }
         }
 
         /// <summary>
@@ -137,8 +151,11 @@ namespace Plant
             if (!_canStartGrowing) return;
             if (!IsHealthy) return;
             if (_stage >= MaxStage) return;
+
+            // Age fast for first stage
+            var ageModifier = _stage == Seedling ? 3 : 1;
             
-            _age += UnitsPerAge / secondsPerAge * Time.deltaTime;
+            _age += UnitsPerAge / secondsPerAge * Time.deltaTime * ageModifier;
             if (_age < UnitsPerAge) return;
             
             _age = 0;
