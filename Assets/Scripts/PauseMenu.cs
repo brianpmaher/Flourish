@@ -1,12 +1,37 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject[] menuObjects;
+    [SerializeField] private GameObject[] menuObjects;
+    [SerializeField] private GameObject startButton;
+    [SerializeField] private GameObject exitButton;
+    [SerializeField] private GameObject restartButton;
 
+    private bool _firstTimeMenu = true;
     private bool _menuOpen;
+
+    private List<GameObject> MenuObjects
+    {
+        get
+        {
+            var combinedMenuObjects = menuObjects.ToList();
+
+            if (_firstTimeMenu)
+            {
+                combinedMenuObjects.Add(startButton);
+            }
+            else
+            {
+                combinedMenuObjects.Add(exitButton);
+                combinedMenuObjects.Add(restartButton);
+            }
+
+            return combinedMenuObjects;
+        }
+    }
     
     private void Start()
     {
@@ -46,11 +71,12 @@ public class PauseMenu : MonoBehaviour
     public void HandleRestartClick()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        CloseMenu();
     }
     
     private void OpenMenu()
     {
-        foreach (var menuObject in menuObjects)
+        foreach (var menuObject in MenuObjects)
         {
             menuObject.SetActive(true);
         }
@@ -61,12 +87,13 @@ public class PauseMenu : MonoBehaviour
 
     private void CloseMenu()
     {
-        foreach (var menuObject in menuObjects)
+        foreach (var menuObject in MenuObjects)
         {
             menuObject.SetActive(false);
         }
 
         _menuOpen = false;
+        _firstTimeMenu = false;
         ResumeGame();
     }
 
