@@ -1,4 +1,6 @@
 using System;
+using DefaultNamespace;
+using Managers;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -8,8 +10,9 @@ namespace Plant
     /// A growable plant.  This script is intended to be attached to a pot, and the plant grows from the pot.
     /// </summary>
     [RequireComponent(typeof(SpriteRenderer))]
-    public class GrowablePlant : MonoBehaviour
+    public class GrowablePlant : MonoBehaviour, IPlant
     {
+        [SerializeField] private GameManager gameManager;
         [SerializeField] private Sprite[] healthyFlowerSprites;
         [SerializeField] private Sprite[] wiltedFlowerSprites;
         [SerializeField] private float secondsPerAge = 120f;
@@ -43,6 +46,7 @@ namespace Plant
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();
             InitializePlant();
+            gameManager.RegisterPlant(this);
         }
 
         private void Update()
@@ -180,6 +184,18 @@ namespace Plant
             if (IsDead) return;
             if (_stage == Seedling) return;
             _nutrientLevel -= nutrientDecreasePerSecond * Time.deltaTime;
+        }
+
+        public PlantHealth GetHealth()
+        {
+            if (IsDead) return PlantHealth.Dead;
+            
+            if (IsHealthy)
+            {
+                return _stage == MaxStage ? PlantHealth.CompleteHealthy : PlantHealth.GrowingHealthy;
+            }
+
+            return _stage == MaxStage ? PlantHealth.CompleteUnhealthy : PlantHealth.GrowingUnhealthy;
         }
     }
 }
