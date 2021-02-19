@@ -73,6 +73,8 @@ namespace Plant
 
         /// <summary>
         /// Initializes the plant in this script to a random plant type and places it within the container.
+        /// Note: I had originally planned to add additional plants, but due to time constraint with the Game Jam, just
+        /// decided to go with the single plant and focus on the other game mechanics.
         /// </summary>
         private void InitializePlant()
         {
@@ -186,6 +188,10 @@ namespace Plant
             _nutrientLevel -= nutrientDecreasePerSecond * Time.deltaTime;
         }
 
+        /// <summary>
+        /// Gets the plant's current health.
+        /// </summary>
+        /// <returns>The plant's current health.</returns>
         public PlantHealth GetHealth()
         {
             if (IsDead) return PlantHealth.Dead;
