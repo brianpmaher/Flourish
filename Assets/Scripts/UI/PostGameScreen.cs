@@ -5,6 +5,8 @@ namespace UI
 {
     public class PostGameScreen : MonoBehaviour
     {
+        public bool isOpen;
+        
         public void Open()
         {
             PauseGame();
@@ -13,8 +15,32 @@ namespace UI
             {
                 child.gameObject.SetActive(true);
             }
+
+            isOpen = true;
         }
-    
+
+        public void Close()
+        {
+            ResumeGame();
+
+            foreach (Transform child in transform)
+            {
+                child.gameObject.SetActive(false);
+            }
+
+            isOpen = false;
+        }
+
+        public void HandleCloseClick()
+        {
+            foreach (Transform child in transform)
+            {
+                child.gameObject.SetActive(false);
+                
+                isOpen = false;
+            }
+        }
+        
         public void HandleExitClick()
         {
             Application.Quit();
@@ -28,6 +54,11 @@ namespace UI
         private static void PauseGame()
         {
             Time.timeScale = 0;
+        }
+
+        private static void ResumeGame()
+        {
+            Time.timeScale = 1;
         }
     }
 }

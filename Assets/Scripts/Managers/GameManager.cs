@@ -15,6 +15,7 @@ namespace Managers
         [SerializeField] private UnityEvent onGameLost;
         
         private readonly List<IPlant> _plants = new List<IPlant>();
+        private bool _gameOver;
     
         public void RegisterPlant(IPlant plant)
         {
@@ -23,20 +24,24 @@ namespace Managers
 
         private void Update()
         {
-            if (GameWon())
-            {
-                onGameWon.Invoke();
-            }
-            else if (GameLost())
+            if (_gameOver) return; // Only show game over screens once.
+            
+            if (GameLost())
             {
                 onGameLost.Invoke();
+                _gameOver = true;
+            }
+            else if (GameWon())
+            {
+                onGameWon.Invoke();
+                _gameOver = true;
             }
         }
 
         private bool GameWon() => 
             _plants
                 .Where(plant => plant.GetHealth() != PlantHealth.Dead)
-                .Count(plant => plant.GetHealth() == PlantHealth.CompleteHealthy) > 0;
+                .All(plant => plant.GetHealth() == PlantHealth.CompleteHealthy);
 
         private bool GameLost() => _plants.All(plant => plant.GetHealth() == PlantHealth.Dead);
     }

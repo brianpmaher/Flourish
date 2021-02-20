@@ -11,6 +11,8 @@ namespace UI
         [SerializeField] private GameObject startButton;
         [SerializeField] private GameObject exitButton;
         [SerializeField] private GameObject restartButton;
+        [SerializeField] private PostGameScreen gameWonScreen;
+        [SerializeField] private PostGameScreen gameLostScreen;
 
         private bool _firstTimeMenu = true;
         private bool _menuOpen;
@@ -77,6 +79,9 @@ namespace UI
     
         private void OpenMenu()
         {
+            // Don't open this menu if one of the post-game screens is open.
+            if (gameWonScreen.isOpen || gameLostScreen.isOpen) return;
+            
             foreach (var menuObject in MenuObjects)
             {
                 menuObject.SetActive(true);
