@@ -1,49 +1,69 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Assertions;
 
 namespace Plant
 {
     /// <summary>
-    /// A plant age system.  An "age" is a period within a stage, where a "stage" is the larger plant age.  So if a
-    /// plant has 6 stages, it will age from 0 to 100 per stage.  Once it reaches the max stage, the plant will stop
-    /// aging.
+    /// Ages a plant through various life stages.  "Age" refers to the lifespan within a "Stage" which describes the
+    /// different appearances of the plant as it grows.  In other words, age is a subset of a stage.
     /// </summary>
-    public class AgeSystem
+    [RequireComponent(typeof(SpriteRenderer))]
+    public class AgeSystem : MonoBehaviour
     {
-        public int Stage { get; private set; }
-        public int MaxStage;
-        public float SecondsPerAge = 60;
-        public bool ShouldAge;
+        private const int Seedling = -1;
+        private const float MaxAgePerStage = 100;
+        private const float MinAgePerStage = 0;
+        
+        [SerializeField] private Sprite[] sprites;
+        [SerializeField] private float secondsPerStage = 40;
+        [SerializeField] [Tooltip("How fast to age during the first stage")] private float seedlingAgeFactor = 2;
+        
+        private SpriteRenderer _spriteRenderer;
+        private int _stage = Seedling;
+        private float _age;
 
-        private float _age = 0;
-        private static float MinAge { get; } = 0;
-        private static float MaxAge { get; } = 100;
+        private int FinalStage => sprites.Length - 1;
 
-        public AgeSystem(int initialStage)
+        private void Start()
         {
-            Stage = initialStage;
+            _spriteRenderer = GetComponent<SpriteRenderer>();
+        }
+
+        private void Update()
+        {
+            UpdateAge();
+            UpdateSprite();
+        }
+
+        private void OnValidate()
+        {
+            Assert.IsTrue(sprites.Length > 0, "At least one sprite is required per plant");
+        }
+
+        private void UpdateAge()
+        {
+            // Stop aging at final stage
+            if (_stage == FinalStage) return;
+
+            // Age differently during the seedling stage
+            var ageFactor = _stage == Seedling ? seedlingAgeFactor : 1;
+            
+            // Increment age
+            _age += MaxAgePerStage / secondsPerStage * Time.deltaTime * ageFactor;
+
+            // Check if age has progressed enough in this stage to advance another stage
+            if (_age < MaxAgePerStage) return;
+            _stage++;
+            _age = MinAgePerStage;
         }
         
-        public bool IsMaxStage() => Stage == MaxStage;
-
-        public IEnumerator Run()
+        private void UpdateSprite()
         {
-            const float secondsPerUpdate = 1;
-            IncreaseAge(MaxAge / SecondsPerAge * secondsPerUpdate);
-            yield return new WaitForSeconds(secondsPerUpdate);
-            yield return Run();
-        }
+            // Don't render any sprites for seedlings
+            if (_stage == Seedling) return;
 
-        private void IncreaseAge(float age)
-        {
-            if (Stage == MaxStage || !ShouldAge) return;
-            
-            _age += age;
-            if (_age >= MaxAge)
-            {
-                Stage++;
-                _age = MinAge;
-            }
+            // Get the appropriate sprite for the life stage
+            _spriteRenderer.sprite = sprites[_stage];
         }
     }
 }
