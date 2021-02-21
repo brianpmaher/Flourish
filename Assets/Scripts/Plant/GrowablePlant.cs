@@ -214,5 +214,35 @@ namespace Plant
 
             return _stage == MaxStage ? PlantHealth.CompleteUnhealthy : PlantHealth.GrowingUnhealthy;
         }
+
+        public bool IsAlive()
+        {
+            throw new NotImplementedException();
+        }
+
+        bool IPlant.IsDead()
+        {
+            throw new NotImplementedException();
+        }
+
+        bool IPlant.IsHealthy()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool IsSick()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool IsSeedling()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool IsDoneGrowing()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

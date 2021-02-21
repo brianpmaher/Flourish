@@ -40,9 +40,9 @@ namespace Managers
 
         private bool GameWon() => 
             _plants
-                .Where(plant => plant.GetHealth() != PlantHealth.Dead)
-                .All(plant => plant.GetHealth() == PlantHealth.CompleteHealthy);
+                .Where(plant => plant.IsAlive())
+                .All(plant => plant.IsHealthy() && plant.IsDoneGrowing());
 
-        private bool GameLost() => _plants.All(plant => plant.GetHealth() == PlantHealth.Dead);
+        private bool GameLost() => _plants.All(plant => plant.IsDead());
     }
 }

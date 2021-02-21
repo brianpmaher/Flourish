@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9096002228685462044}
   - component: {fileID: 2635794099196250167}
+  - component: {fileID: 1052227808203224024}
   m_Layer: 0
   m_Name: Flower
   m_TagString: Untagged
@@ -68,8 +69,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1012558885
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -82,3 +83,47 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1052227808203224024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3418540568827026367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23acf469627e409db043a1d4f4e591ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 5271657982574377372, guid: 4f45e19ee32cdbe4b84e703611a0ef02, type: 3}
+  healthySprites:
+  - {fileID: -2379158974372940971, guid: f01ae744170881b4a88ef0c65ca07016, type: 3}
+  - {fileID: -9031274173257203007, guid: f01ae744170881b4a88ef0c65ca07016, type: 3}
+  - {fileID: 3521824405373028907, guid: f01ae744170881b4a88ef0c65ca07016, type: 3}
+  - {fileID: -3077186201020428327, guid: f01ae744170881b4a88ef0c65ca07016, type: 3}
+  - {fileID: -8416399094565615915, guid: f01ae744170881b4a88ef0c65ca07016, type: 3}
+  - {fileID: -3389358141271136911, guid: f01ae744170881b4a88ef0c65ca07016, type: 3}
+  unhealthyWaterSprites:
+  - {fileID: -3568474980126724011, guid: 039de408e4f068549a7a417fdfc821de, type: 3}
+  - {fileID: -721679520939658643, guid: 039de408e4f068549a7a417fdfc821de, type: 3}
+  - {fileID: -1933584134171321059, guid: 039de408e4f068549a7a417fdfc821de, type: 3}
+  - {fileID: -1669075763019012898, guid: 039de408e4f068549a7a417fdfc821de, type: 3}
+  - {fileID: -2034719251043708919, guid: 039de408e4f068549a7a417fdfc821de, type: 3}
+  - {fileID: -8046342106208320188, guid: 039de408e4f068549a7a417fdfc821de, type: 3}
+  unhealthyNpkColor: {r: 1, g: 0.3220339, b: 0, a: 1}
+  deadColor: {r: 0, g: 0, b: 0, a: 1}
+  secondsPerAge: 40
+  waterMinLevel: 0
+  waterMaxLevel: 100
+  waterMinHealthyLevel: 33
+  waterMaxHealthyLevel: 67
+  waterInitialLevel: 50
+  waterIncreasePerSecond: 3
+  waterDecreasePerSecond: 0.25
+  npkMinLevel: 0
+  npkMaxLevel: 100
+  npkMinHealthyLevel: 33
+  npkMaxHealthyLevel: 67
+  npkInitialLevel: 50
+  npkIncreasePerSecond: 3
+  npkDecreasePerSecond: 0.25

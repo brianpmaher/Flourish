@@ -1,4 +1,7 @@
-﻿namespace Plant
+﻿using System.Collections;
+using UnityEngine;
+
+namespace Plant
 {
     /// <summary>
     /// A plant age system.  An "age" is a period within a stage, where a "stage" is the larger plant age.  So if a
@@ -8,35 +11,38 @@
     public class AgeSystem
     {
         public int Stage { get; private set; }
+        public int MaxStage;
+        public float SecondsPerAge = 60;
+        public bool ShouldAge;
 
-        private int _maxStage;
         private float _age = 0;
-        private const float _minAge = 0;
-        private const float _maxAge = 100;
+        private static float MinAge { get; } = 0;
+        private static float MaxAge { get; } = 100;
 
-        public AgeSystem(int initialStage, int maxStage)
+        public AgeSystem(int initialStage)
         {
             Stage = initialStage;
-            _maxStage = maxStage;
-        }
-
-        public static AgeSystem FromAgeSystem(AgeSystem ageSystem)
-        {
-            return new AgeSystem(ageSystem.Stage, ageSystem._maxStage) { _age = ageSystem._age };
         }
         
-        public void SetMaxStage(int maxStage) => _maxStage = maxStage;
+        public bool IsMaxStage() => Stage == MaxStage;
 
-        public bool IsMaxStage() => Stage == _maxStage;
-
-        public void IncreaseAge(float age)
+        public IEnumerator Run()
         {
-            if (Stage == _maxStage) return;
+            const float secondsPerUpdate = 1;
+            IncreaseAge(MaxAge / SecondsPerAge * secondsPerUpdate);
+            yield return new WaitForSeconds(secondsPerUpdate);
+            yield return Run();
+        }
+
+        private void IncreaseAge(float age)
+        {
+            if (Stage == MaxStage || !ShouldAge) return;
             
             _age += age;
-            if (_age >= _maxAge)
+            if (_age >= MaxAge)
             {
                 Stage++;
+                _age = MinAge;
             }
         }
     }

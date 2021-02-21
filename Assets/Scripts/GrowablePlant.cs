@@ -1,11 +1,12 @@
-﻿using System.Linq;
+﻿using System.Collections;
+using System.Linq;
 using Managers;
 using Plant;
 using UnityEngine;
 using UnityEngine.Assertions;
 
 [RequireComponent(typeof(SpriteRenderer))]
-public class Growable : MonoBehaviour, IPlant
+public class GrowablePlant : MonoBehaviour, IPlant
 {
     [Header("Dependencies")] 
     [SerializeField] private GameManager gameManager;
@@ -47,8 +48,13 @@ public class Growable : MonoBehaviour, IPlant
 
     private void Start()
     {
-        _spriteRenderer = GetComponent<SpriteRenderer>();
+        InitSprite();
         gameManager.RegisterPlant(this);
+        // TODO: Only set this once the plant is watered for the first time.
+        _ageSystem.ShouldAge = true;
+        StartCoroutine("RunAgeSystem");
+        StartCoroutine("RunWaterSystem");
+        StartCoroutine("RunNpkSystem");
     }
 
     private void OnValidate()
@@ -57,8 +63,8 @@ public class Growable : MonoBehaviour, IPlant
         Assert.IsTrue(healthySprites.Length > 0);
         Assert.IsTrue(unhealthyWaterSprites.Length > 0);
         Assert.AreEqual(healthySprites.Length, unhealthyWaterSprites.Length);
-        _ageSystem = CreateAgeSystem();
-        _nutrientSystems = CreateNutrientSystems();
+        ConfigAgeSystem();
+        ConfigNutrientSystems();
     }
 
     private void Update()
@@ -69,11 +75,6 @@ public class Growable : MonoBehaviour, IPlant
     private void OnParticleCollision(GameObject other)
     {
         
-    }
-    
-    public void SetNutrientSystems(NutrientSystem[] nutrientSystems)
-    {
-        _nutrientSystems = nutrientSystems;
     }
 
     public bool IsAlive() => _nutrientSystems.All(nutrientSystem => nutrientSystem.IsWithinRange());
@@ -88,46 +89,64 @@ public class Growable : MonoBehaviour, IPlant
 
     public bool IsDoneGrowing() => _ageSystem.IsMaxStage();
 
-    private AgeSystem CreateAgeSystem()
+    private void InitSprite()
+    {
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+    
+    private void ConfigAgeSystem()
     {
         var maxStage = healthySprites.Length - 1;
-        _ageSystem ??= new AgeSystem(Seedling, maxStage);
-        _ageSystem.SetMaxStage(maxStage);
-        return AgeSystem.FromAgeSystem(_ageSystem);
+        _ageSystem ??= new AgeSystem(Seedling);
+        _ageSystem.MaxStage = maxStage;
+        _ageSystem.SecondsPerAge = secondsPerAge;
     }
     
-    private NutrientSystem CreateWaterNutrientSystem()
+    private void ConfigWaterSystem()
     {
-        _waterSystem = new NutrientSystem(
-            waterMinLevel, 
-            waterMinHealthyLevel, 
-            waterMaxLevel, 
-            waterMaxHealthyLevel,
-            waterInitialLevel, 
-            waterIncreasePerSecond, 
-            waterDecreasePerSecond
-        );
-
-        return _waterSystem;
+        _waterSystem ??= new NutrientSystem(waterInitialLevel);
+        _waterSystem.MinLevel = waterMinLevel;
+        _waterSystem.MaxLevel = waterMaxLevel;
+        _waterSystem.MinHealthyLevel = waterMinHealthyLevel;
+        _waterSystem.MaxHealthyLevel = waterMaxHealthyLevel;
+        _waterSystem.DecreasePerSecond = waterDecreasePerSecond;
+        _waterSystem.IncreasePerSecond = waterIncreasePerSecond;
     }
     
-    private NutrientSystem CreateNpkNutrientSystem()
+    private void ConfigNpkSystem()
     {
-        _npkSystem = new NutrientSystem(
-            npkMinLevel, 
-            npkMinHealthyLevel, 
-            npkMaxLevel, 
-            npkMaxHealthyLevel,
-            npkInitialLevel, 
-            npkIncreasePerSecond, 
-            npkDecreasePerSecond
-        );
-
-        return _npkSystem;
+        _npkSystem ??= new NutrientSystem(npkInitialLevel);
+        _npkSystem.MinLevel = npkMinLevel;
+        _npkSystem.MaxLevel = npkMaxLevel;
+        _npkSystem.MinHealthyLevel = npkMinHealthyLevel;
+        _npkSystem.MaxHealthyLevel = npkMaxHealthyLevel;
+        _npkSystem.DecreasePerSecond = npkDecreasePerSecond;
+        _npkSystem.IncreasePerSecond = npkIncreasePerSecond;
     }
 
-    private NutrientSystem[] CreateNutrientSystems() {
-        return new[] { CreateWaterNutrientSystem(), CreateNpkNutrientSystem() };
+    private void ConfigNutrientSystems()
+    {
+        ConfigWaterSystem();
+        ConfigNpkSystem();
+        _nutrientSystems ??= new[] {_waterSystem, _npkSystem};
+    }
+
+    private IEnumerator RunAgeSystem()
+    {
+        yield return _ageSystem.Run();
+    }
+
+    private void RunWaterSystem()
+    {
+    }
+
+    private void RunNpkSystem()
+    {
+    }
+
+    private void UpdateAgeSystem()
+    {
+        _ageSystem.ShouldAge = IsHealthy();
     }
     
     private void UpdateAppearance()
@@ -145,6 +164,7 @@ public class Growable : MonoBehaviour, IPlant
 
     private Sprite GetSprite()
     {
+        if (IsSeedling()) return null;
         var stage = _ageSystem.Stage;
         if (IsDead() || _waterSystem.IsUnhealthy()) return unhealthyWaterSprites[stage];
         return healthySprites[stage];
