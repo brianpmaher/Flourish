@@ -1,7 +1,8 @@
 using System;
-using DefaultNamespace;
+using System.Collections;
 using Managers;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 namespace Plant
@@ -17,9 +18,9 @@ namespace Plant
         [SerializeField] private Sprite[] wiltedFlowerSprites;
         [SerializeField] private float secondsPerAge = 120f;
         [SerializeField] private float waterDecreasePerSecond = 0.25f;
-        [SerializeField] private float waterIncreasePerParticle = 0.1f;
+        [FormerlySerializedAs("waterIncreasePerParticle")] [SerializeField] private float waterIncreasePerSecond = 0.1f;
         [SerializeField] private float nutrientDecreasePerSecond = 0.25f;
-        [SerializeField] private float nutrientIncreasePerParticle = 0.1f;
+        [FormerlySerializedAs("nutrientIncreasePerParticle")] [SerializeField] private float nutrientIncreasePerSecond = 0.1f;
         [SerializeField] private Color lowOrHighNutrientColor;
         [SerializeField] private Color deadColor;
 
@@ -57,18 +58,28 @@ namespace Plant
             UpdatePlantSprite();
         }
         
-        private void OnParticleCollision(GameObject other)
+        // TODO: Refactor this to set some isWatering isNutrienting boolean.  This is still killing the plant too fast.
+        private IEnumerator OnParticleCollision(GameObject other)
         {
-            if (IsDead) return;
+            if (IsDead) yield return null;
             
             if (_stage == Seedling)
             {
                 _canStartGrowing = true;
-                return;
+                yield return null;
             }
 
-            if (other.CompareTag("Water")) _waterLevel += waterIncreasePerParticle;
-            if (other.CompareTag("Nutrients")) _nutrientLevel += nutrientIncreasePerParticle;
+            if (other.CompareTag("Water"))
+            {
+                _waterLevel += waterIncreasePerSecond;
+                yield return new WaitForSeconds(1);
+            }
+
+            if (other.CompareTag("Nutrients"))
+            {
+                _nutrientLevel += nutrientIncreasePerSecond;
+                yield return new WaitForSeconds(1);
+            }
         }
 
         /// <summary>

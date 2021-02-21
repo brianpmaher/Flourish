@@ -1,5 +1,8 @@
-﻿namespace DefaultNamespace
+﻿using System;
+
+namespace Plant
 {
+    [Obsolete]
     public enum PlantHealth
     {
         GrowingHealthy,
