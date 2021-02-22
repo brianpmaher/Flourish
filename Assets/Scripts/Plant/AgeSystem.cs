@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEngine.Serialization;
 
 namespace Plant
 {
@@ -13,16 +14,19 @@ namespace Plant
         private const int Seedling = -1;
         private const float MaxAgePerStage = 100;
         private const float MinAgePerStage = 0;
-        
-        [SerializeField] private Sprite[] sprites;
+
+        [SerializeField] public bool canAge = true;
+        [SerializeField] public int stage = Seedling;
         [SerializeField] private float secondsPerStage = 40;
         [SerializeField] [Tooltip("How fast to age during the first stage")] private float seedlingAgeFactor = 2;
+        [SerializeField] public Sprite[] sprites;
         
         private SpriteRenderer _spriteRenderer;
-        private int _stage = Seedling;
         private float _age;
 
+        public bool IsSeedling => stage == Seedling;
         private int FinalStage => sprites.Length - 1;
+        private bool IsFinalStage => stage == FinalStage;
 
         private void Start()
         {
@@ -35,35 +39,33 @@ namespace Plant
             UpdateSprite();
         }
 
-        private void OnValidate()
-        {
-            Assert.IsTrue(sprites.Length > 0, "At least one sprite is required per plant");
-        }
-
         private void UpdateAge()
         {
+            // Check if we can age first
+            if (!canAge) return;
+            
             // Stop aging at final stage
-            if (_stage == FinalStage) return;
-
+            if (IsFinalStage) return;
+            
             // Age differently during the seedling stage
-            var ageFactor = _stage == Seedling ? seedlingAgeFactor : 1;
+            var ageFactor = stage == Seedling ? seedlingAgeFactor : 1;
             
             // Increment age
             _age += MaxAgePerStage / secondsPerStage * Time.deltaTime * ageFactor;
 
             // Check if age has progressed enough in this stage to advance another stage
             if (_age < MaxAgePerStage) return;
-            _stage++;
+            stage++;
             _age = MinAgePerStage;
         }
         
         private void UpdateSprite()
         {
             // Don't render any sprites for seedlings
-            if (_stage == Seedling) return;
+            if (IsSeedling) return;
 
             // Get the appropriate sprite for the life stage
-            _spriteRenderer.sprite = sprites[_stage];
+            _spriteRenderer.sprite = sprites[stage];
         }
     }
 }

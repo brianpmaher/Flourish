@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 9096002228685462044}
   - component: {fileID: 2635794099196250167}
   - component: {fileID: -4385838385726539531}
-  m_Layer: 0
+  - component: {fileID: -9046452305485646874}
+  - component: {fileID: -912899427872981531}
+  m_Layer: 6
   m_Name: Flower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,6 +97,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91d984b94c094a2580fca6b95d17abbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canAge: 1
+  stage: -1
+  secondsPerStage: 40
+  seedlingAgeFactor: 2
   sprites:
   - {fileID: -2379158974372940971, guid: f01ae744170881b4a88ef0c65ca07016, type: 3}
   - {fileID: -9031274173257203007, guid: f01ae744170881b4a88ef0c65ca07016, type: 3}
@@ -102,4 +108,65 @@ MonoBehaviour:
   - {fileID: -3077186201020428327, guid: f01ae744170881b4a88ef0c65ca07016, type: 3}
   - {fileID: -8416399094565615915, guid: f01ae744170881b4a88ef0c65ca07016, type: 3}
   - {fileID: -3389358141271136911, guid: f01ae744170881b4a88ef0c65ca07016, type: 3}
-  secondsPerStage: 40
+--- !u!114 &-9046452305485646874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3418540568827026367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6bd2c7bc2fd4d6098e21e769a44f28f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wiltedSprites:
+  - {fileID: -3568474980126724011, guid: 039de408e4f068549a7a417fdfc821de, type: 3}
+  - {fileID: -721679520939658643, guid: 039de408e4f068549a7a417fdfc821de, type: 3}
+  - {fileID: -1933584134171321059, guid: 039de408e4f068549a7a417fdfc821de, type: 3}
+  - {fileID: -1669075763019012898, guid: 039de408e4f068549a7a417fdfc821de, type: 3}
+  - {fileID: -2034719251043708919, guid: 039de408e4f068549a7a417fdfc821de, type: 3}
+  - {fileID: -8046342106208320188, guid: 039de408e4f068549a7a417fdfc821de, type: 3}
+  minWaterLevel: 0
+  maxWaterLevel: 100
+  minHealthyWaterLevel: 33
+  maxHealthyWaterLevel: 67
+  waterIncreasePerSecond: 3
+  waterDecreasePerSecond: 0.25
+  waterLevel: 50
+  waterDecreaseAfterWateringDelaySeconds: 0.25
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -912899427872981531}
+        m_TargetAssemblyTypeName: Plant.DeathSystem, Assembly-CSharp
+        m_MethodName: Die
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &-912899427872981531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3418540568827026367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf54d9a3c68940948ace915af686a897, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -3568474980126724011, guid: 039de408e4f068549a7a417fdfc821de, type: 3}
+  - {fileID: -721679520939658643, guid: 039de408e4f068549a7a417fdfc821de, type: 3}
+  - {fileID: -1933584134171321059, guid: 039de408e4f068549a7a417fdfc821de, type: 3}
+  - {fileID: -1669075763019012898, guid: 039de408e4f068549a7a417fdfc821de, type: 3}
+  - {fileID: -2034719251043708919, guid: 039de408e4f068549a7a417fdfc821de, type: 3}
+  - {fileID: -8046342106208320188, guid: 039de408e4f068549a7a417fdfc821de, type: 3}
+  deathColor: {r: 0, g: 0, b: 0, a: 1}
