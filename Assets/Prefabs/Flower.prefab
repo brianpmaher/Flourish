@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91d984b94c094a2580fca6b95d17abbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canAge: 1
+  canAge: 0
   stage: -1
   secondsPerStage: 40
   seedlingAgeFactor: 2

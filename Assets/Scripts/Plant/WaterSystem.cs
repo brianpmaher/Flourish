@@ -1,6 +1,5 @@
 ﻿using System;
 using UnityEngine;
-using UnityEngine.Assertions;
 using UnityEngine.Events;
 
 namespace Plant
@@ -32,6 +31,12 @@ namespace Plant
         public void HandleWatered()
         {
             _lastWaterTime = DateTime.Now;
+            
+            // Kick off aging system if it hasn't started yet
+            if (!_ageSystem.canAge)
+            {
+                _ageSystem.canAge = true;
+            }
         }
         
         private void Start()

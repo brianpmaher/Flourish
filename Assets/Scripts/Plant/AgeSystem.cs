@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.Assertions;
-using UnityEngine.Serialization;
 
 namespace Plant
 {
@@ -15,7 +13,7 @@ namespace Plant
         private const float MaxAgePerStage = 100;
         private const float MinAgePerStage = 0;
 
-        [SerializeField] public bool canAge = true;
+        [SerializeField] public bool canAge;
         [SerializeField] public int stage = Seedling;
         [SerializeField] private float secondsPerStage = 40;
         [SerializeField] [Tooltip("How fast to age during the first stage")] private float seedlingAgeFactor = 2;
