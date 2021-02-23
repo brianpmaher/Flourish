@@ -11,8 +11,12 @@ namespace Managers
     /// </summary>
     public class GameManager : MonoBehaviour
     {
+        #region Unity Inspector Fields
+
         [SerializeField] private UnityEvent onGameWon;
         [SerializeField] private UnityEvent onGameLost;
+        
+        #endregion
         
         private readonly List<IPlant> _plants = new List<IPlant>();
         private bool _gameOver;

@@ -13,10 +13,14 @@ namespace Plant
         private const float MaxAgePerStage = 100;
         private const float MinAgePerStage = 0;
 
+        #region Unity Inspector Fields
+
         [SerializeField] public int stage = Seedling;
         [SerializeField] private float secondsPerStage = 40;
         [SerializeField] [Tooltip("How fast to age during the first stage")] private float seedlingAgeFactor = 2;
         [SerializeField] public Sprite[] sprites;
+        
+        #endregion
         
         private SpriteRenderer _spriteRenderer;
         private bool canAge;
@@ -31,7 +35,7 @@ namespace Plant
             canAge = true;
         }
 
-        private void Start()
+        private void Awake()
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();
         }

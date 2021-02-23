@@ -5,10 +5,15 @@ using UnityEngine.Serialization;
 
 namespace Plant
 {
+    /// <summary>
+    /// Handles plant water levels.
+    /// </summary>
     [RequireComponent(typeof(SpriteRenderer))]
     [RequireComponent(typeof(AgeSystem))]
     public class WaterSystem : MonoBehaviour
     {
+        #region Unity Inspector Fields
+        
         [SerializeField] private Sprite[] wiltedSprites;
         [SerializeField] private float minWaterLevel;
         [SerializeField] private float maxWaterLevel = 100;
@@ -19,6 +24,8 @@ namespace Plant
         [SerializeField] private float waterLevel = 50;
         [SerializeField] private float waterDecreaseAfterWateringDelaySeconds = 1;
         [FormerlySerializedAs("OnDeath")] [SerializeField] private UnityEvent onDeath;
+        
+        #endregion
         
         private SpriteRenderer _spriteRenderer;
         private AgeSystem _ageSystem;
@@ -34,7 +41,7 @@ namespace Plant
             _lastWaterTime = DateTime.Now;
         }
         
-        private void Start()
+        private void Awake()
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();
             _ageSystem = GetComponent<AgeSystem>();
@@ -47,7 +54,6 @@ namespace Plant
             CheckForDeath();
         }
 
-        // Late update to always run after AgeSystem sets the sprite
         private void LateUpdate()
         {
             if (IsDead) return;

@@ -4,10 +4,15 @@ using UnityEngine.Events;
 
 namespace Plant
 {
+    /// <summary>
+    /// Handles plant nutrient levels.
+    /// </summary>
     [RequireComponent(typeof(SpriteRenderer))]
     [RequireComponent(typeof(AgeSystem))]
     public class NutrientSystem : MonoBehaviour
     {
+        #region Unity Inspector Fields
+        
         [SerializeField] private Color unhealthyNutrientColor = new Color(247, 91, 18);
         [SerializeField] private float minNutrientLevel;
         [SerializeField] private float maxNutrientLevel = 100;
@@ -18,6 +23,8 @@ namespace Plant
         [SerializeField] private float nutrientLevel = 50;
         [SerializeField] private float nutrientDecreaseAfterNutrientAddedDelaySeconds = 1;
         [SerializeField] private UnityEvent onDeath;
+        
+        #endregion
         
         private SpriteRenderer _spriteRenderer;
         private AgeSystem _ageSystem;
@@ -33,7 +40,7 @@ namespace Plant
             _lastNutrientTime = DateTime.Now;
         }
         
-        private void Start()
+        private void Awake()
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();
             _ageSystem = GetComponent<AgeSystem>();
@@ -46,7 +53,6 @@ namespace Plant
             CheckForDeath();
         }
 
-        // Late update to always run after AgeSystem sets the sprite
         private void LateUpdate()
         {
             if (IsDead) return;

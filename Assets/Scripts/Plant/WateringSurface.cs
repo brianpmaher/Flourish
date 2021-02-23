@@ -4,9 +4,16 @@ using UnityEngine.Serialization;
 
 namespace Plant
 {
+    /// <summary>
+    /// Handles water collision surface.
+    /// </summary>
     public class WateringSurface : MonoBehaviour
     {
+        #region Unity Inspector Fields
+        
         [FormerlySerializedAs("OnWatered")] [SerializeField] private UnityEvent onWatered;
+        
+        #endregion
         
         private void OnParticleCollision(GameObject other)
         {
