@@ -9,6 +9,7 @@ namespace Plant
     /// </summary>
     [RequireComponent(typeof(SpriteRenderer))]
     [RequireComponent(typeof(AgeSystem))]
+    [RequireComponent(typeof(DeathSystem))]
     public class NutrientSystem : MonoBehaviour
     {
         #region Unity Inspector Fields
@@ -28,11 +29,12 @@ namespace Plant
         
         private SpriteRenderer _spriteRenderer;
         private AgeSystem _ageSystem;
+        private DeathSystem _deathSystem;
         private DateTime _lastNutrientTime;
 
         public bool IsHealthy => !IsUnhealthy;
         private bool IsUnhealthy => nutrientLevel < minHealthyNutrientLevel || nutrientLevel > maxHealthyNutrientLevel;
-        private bool IsDead => nutrientLevel < minNutrientLevel || nutrientLevel > maxNutrientLevel;
+        private bool IsNutrientDeath => nutrientLevel < minNutrientLevel || nutrientLevel > maxNutrientLevel;
         private bool IsAddingNutrients => 
             DateTime.Now - _lastNutrientTime < TimeSpan.FromSeconds(nutrientDecreaseAfterNutrientAddedDelaySeconds);
         
@@ -45,18 +47,19 @@ namespace Plant
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();
             _ageSystem = GetComponent<AgeSystem>();
+            _deathSystem = GetComponent<DeathSystem>();
         }
 
         private void Update()
         {
-            if (IsDead) return;
+            if (_deathSystem.isDead) return;
             UpdateNutrientLevel();
             CheckForDeath();
         }
 
         private void LateUpdate()
         {
-            if (IsDead) return;
+            if (_deathSystem.isDead) return;
             UpdateColor();
         }
 
@@ -88,7 +91,7 @@ namespace Plant
 
         private void CheckForDeath()
         {
-            if (IsDead)
+            if (IsNutrientDeath)
             {
                 onDeath.Invoke();
             }

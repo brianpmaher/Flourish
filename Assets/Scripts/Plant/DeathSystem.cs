@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Plant
 {
@@ -18,11 +19,11 @@ namespace Plant
 
         private SpriteRenderer _spriteRenderer;
         private AgeSystem _ageSystem;
-        private bool _isDead;
+        public bool isDead;
 
         public void Die()
         {
-            _isDead = true;
+            isDead = true;
             _spriteRenderer.sprite = sprites[_ageSystem.stage];
             _spriteRenderer.color = deathColor;
         }

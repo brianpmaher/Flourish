@@ -76,6 +76,9 @@ namespace Plant
         {
             // Don't render any sprites for seedlings
             if (IsSeedling) return;
+            
+            // Don't update the sprite if unhealthy
+            if (_healthSystem.IsUnhealthy) return;
 
             // Get the appropriate sprite for the life stage
             _spriteRenderer.sprite = sprites[stage];
