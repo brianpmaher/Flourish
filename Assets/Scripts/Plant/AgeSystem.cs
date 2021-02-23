@@ -7,6 +7,7 @@ namespace Plant
     /// different appearances of the plant as it grows.  In other words, age is a subset of a stage.
     /// </summary>
     [RequireComponent(typeof(SpriteRenderer))]
+    [RequireComponent(typeof(HealthSystem))]
     public class AgeSystem : MonoBehaviour
     {
         private const int Seedling = -1;
@@ -23,7 +24,8 @@ namespace Plant
         #endregion
         
         private SpriteRenderer _spriteRenderer;
-        private bool canAge;
+        private HealthSystem _healthSystem;
+        private bool _canAge;
         private float _age;
 
         public bool IsSeedling => stage == Seedling;
@@ -32,12 +34,13 @@ namespace Plant
 
         public void StartAging()
         {
-            canAge = true;
+            _canAge = true;
         }
 
         private void Awake()
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();
+            _healthSystem = GetComponent<HealthSystem>();
         }
 
         private void Update()
@@ -49,7 +52,10 @@ namespace Plant
         private void UpdateAge()
         {
             // Check if we can age first
-            if (!canAge) return;
+            if (!_canAge) return;
+            
+            // Don't age if unhealthy
+            if (_healthSystem.IsUnhealthy) return;
             
             // Stop aging at final stage
             if (IsFinalStage) return;

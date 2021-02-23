@@ -30,6 +30,7 @@ namespace Plant
         private AgeSystem _ageSystem;
         private DateTime _lastNutrientTime;
 
+        public bool IsHealthy => !IsUnhealthy;
         private bool IsUnhealthy => nutrientLevel < minHealthyNutrientLevel || nutrientLevel > maxHealthyNutrientLevel;
         private bool IsDead => nutrientLevel < minNutrientLevel || nutrientLevel > maxNutrientLevel;
         private bool IsAddingNutrients => 

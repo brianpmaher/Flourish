@@ -31,6 +31,7 @@ namespace Plant
         private AgeSystem _ageSystem;
         private DateTime _lastWaterTime;
 
+        public bool IsHealthy => !IsWilted;
         private bool IsWilted => waterLevel < minHealthyWaterLevel || waterLevel > maxHealthyWaterLevel;
         private bool IsDead => waterLevel < minWaterLevel || waterLevel > maxWaterLevel;
         private bool IsWatering => 
