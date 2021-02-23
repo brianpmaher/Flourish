@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 namespace Plant
 {
@@ -9,7 +10,7 @@ namespace Plant
     public class WaterSystem : MonoBehaviour
     {
         [SerializeField] private Sprite[] wiltedSprites;
-        [SerializeField] private float minWaterLevel = 0;
+        [SerializeField] private float minWaterLevel;
         [SerializeField] private float maxWaterLevel = 100;
         [SerializeField] private float minHealthyWaterLevel = 33;
         [SerializeField] private float maxHealthyWaterLevel = 67;
@@ -17,7 +18,7 @@ namespace Plant
         [SerializeField] private float waterDecreasePerSecond = .25f;
         [SerializeField] private float waterLevel = 50;
         [SerializeField] private float waterDecreaseAfterWateringDelaySeconds = 1;
-        [SerializeField] private UnityEvent OnDeath;
+        [FormerlySerializedAs("OnDeath")] [SerializeField] private UnityEvent onDeath;
         
         private SpriteRenderer _spriteRenderer;
         private AgeSystem _ageSystem;
@@ -31,12 +32,6 @@ namespace Plant
         public void HandleWatered()
         {
             _lastWaterTime = DateTime.Now;
-            
-            // Kick off aging system if it hasn't started yet
-            if (!_ageSystem.canAge)
-            {
-                _ageSystem.canAge = true;
-            }
         }
         
         private void Start()
@@ -85,7 +80,7 @@ namespace Plant
         {
             if (IsDead)
             {
-                OnDeath.Invoke();
+                onDeath.Invoke();
             }
         }
     }

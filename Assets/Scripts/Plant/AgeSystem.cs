@@ -13,18 +13,23 @@ namespace Plant
         private const float MaxAgePerStage = 100;
         private const float MinAgePerStage = 0;
 
-        [SerializeField] public bool canAge;
         [SerializeField] public int stage = Seedling;
         [SerializeField] private float secondsPerStage = 40;
         [SerializeField] [Tooltip("How fast to age during the first stage")] private float seedlingAgeFactor = 2;
         [SerializeField] public Sprite[] sprites;
         
         private SpriteRenderer _spriteRenderer;
+        private bool canAge;
         private float _age;
 
         public bool IsSeedling => stage == Seedling;
         private int FinalStage => sprites.Length - 1;
         private bool IsFinalStage => stage == FinalStage;
+
+        public void StartAging()
+        {
+            canAge = true;
+        }
 
         private void Start()
         {

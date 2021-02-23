@@ -1,17 +1,18 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 namespace Plant
 {
     public class WateringSurface : MonoBehaviour
     {
-        [SerializeField] private UnityEvent OnWatered;
+        [FormerlySerializedAs("OnWatered")] [SerializeField] private UnityEvent onWatered;
         
         private void OnParticleCollision(GameObject other)
         {
             if (other.CompareTag("Water"))
             {
-                OnWatered.Invoke();
+                onWatered.Invoke();
             }
         }
     }
