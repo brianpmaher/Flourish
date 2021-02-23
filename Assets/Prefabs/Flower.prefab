@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -9046452305485646874}
   - component: {fileID: -125841029912266167}
   - component: {fileID: -912899427872981531}
+  - component: {fileID: -4286847966928007595}
   m_Layer: 6
   m_Name: Flower
   m_TagString: Untagged
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1012558885
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -206,3 +207,16 @@ MonoBehaviour:
   - {fileID: -2034719251043708919, guid: 039de408e4f068549a7a417fdfc821de, type: 3}
   - {fileID: -8046342106208320188, guid: 039de408e4f068549a7a417fdfc821de, type: 3}
   deathColor: {r: 0, g: 0, b: 0, a: 1}
+  isDead: 0
+--- !u!114 &-4286847966928007595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3418540568827026367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 543d56a037b845b09b6c20e1ffbe6082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
