@@ -8,6 +8,7 @@ namespace Plant
     /// </summary>
     [RequireComponent(typeof(SpriteRenderer))]
     [RequireComponent(typeof(HealthSystem))]
+    [RequireComponent(typeof(DeathSystem))]
     public class AgeSystem : MonoBehaviour
     {
         private const int Seedling = -1;
@@ -25,6 +26,7 @@ namespace Plant
         
         private SpriteRenderer _spriteRenderer;
         private HealthSystem _healthSystem;
+        private DeathSystem _deathSystem;
         private bool _canAge;
         private float _age;
 
@@ -41,6 +43,7 @@ namespace Plant
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();
             _healthSystem = GetComponent<HealthSystem>();
+            _deathSystem = GetComponent<DeathSystem>();
         }
 
         private void Update()
@@ -77,8 +80,8 @@ namespace Plant
             // Don't render any sprites for seedlings
             if (IsSeedling) return;
             
-            // Don't update the sprite if unhealthy
-            if (_healthSystem.IsUnhealthy) return;
+            // Don't update the sprite if dead
+            if (_deathSystem.isDead) return;
 
             // Get the appropriate sprite for the life stage
             _spriteRenderer.sprite = sprites[stage];
