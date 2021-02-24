@@ -102,7 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stage: -1
   secondsPerStage: 40
-  seedlingAgeFactor: 2
+  seedlingAgeFactor: 15
   sprites:
   - {fileID: -2379158974372940971, guid: f01ae744170881b4a88ef0c65ca07016, type: 3}
   - {fileID: -9031274173257203007, guid: f01ae744170881b4a88ef0c65ca07016, type: 3}
@@ -130,12 +130,12 @@ MonoBehaviour:
   - {fileID: -2034719251043708919, guid: 039de408e4f068549a7a417fdfc821de, type: 3}
   - {fileID: -8046342106208320188, guid: 039de408e4f068549a7a417fdfc821de, type: 3}
   minWaterLevel: 0
-  maxWaterLevel: 100
-  minHealthyWaterLevel: 33
-  maxHealthyWaterLevel: 67
-  waterIncreasePerSecond: 3
-  waterDecreasePerSecond: 0.25
-  waterLevel: 50
+  maxWaterLevel: 90
+  minHealthyWaterLevel: 13
+  maxHealthyWaterLevel: 60
+  waterIncreasePerSecond: 6
+  waterDecreasePerSecond: 0.36
+  waterLevel: 25
   waterDecreaseAfterWateringDelaySeconds: 0.25
   onDeath:
     m_PersistentCalls:
@@ -166,12 +166,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unhealthyNutrientColor: {r: 0.8584906, g: 0.33411676, b: 0.08503916, a: 1}
   minNutrientLevel: 0
-  maxNutrientLevel: 100
-  minHealthyNutrientLevel: 33
-  maxHealthyNutrientLevel: 67
-  nutrientIncreasePerSecond: 3
-  nutrientDecreasePerSecond: 0.25
-  nutrientLevel: 60
+  maxNutrientLevel: 90
+  minHealthyNutrientLevel: 13
+  maxHealthyNutrientLevel: 60
+  nutrientIncreasePerSecond: 6
+  nutrientDecreasePerSecond: 0.36
+  nutrientLevel: 40
   nutrientDecreaseAfterNutrientAddedDelaySeconds: 0.25
   onDeath:
     m_PersistentCalls:
