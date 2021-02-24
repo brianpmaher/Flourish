@@ -33,6 +33,8 @@ namespace UI
 
         public void HandleCloseClick()
         {
+            ResumeGame();
+            
             foreach (Transform child in transform)
             {
                 child.gameObject.SetActive(false);

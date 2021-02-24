@@ -5,14 +5,21 @@ using UnityEngine.SceneManagement;
 
 namespace UI
 {
+    /// <summary>
+    /// Handles the pause menu.
+    /// </summary>
     public class PauseMenu : MonoBehaviour
     {
+        #region Unity Inspector Fields
+        
         [SerializeField] private GameObject[] menuObjects;
         [SerializeField] private GameObject startButton;
         [SerializeField] private GameObject exitButton;
         [SerializeField] private GameObject restartButton;
         [SerializeField] private PostGameScreen gameWonScreen;
         [SerializeField] private PostGameScreen gameLostScreen;
+        
+        #endregion
 
         private bool _firstTimeMenu = true;
         private bool _menuOpen;

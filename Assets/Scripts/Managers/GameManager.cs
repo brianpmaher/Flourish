@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using DefaultNamespace;
+using Plant;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -11,15 +11,19 @@ namespace Managers
     /// </summary>
     public class GameManager : MonoBehaviour
     {
+        #region Unity Inspector Fields
+
         [SerializeField] private UnityEvent onGameWon;
         [SerializeField] private UnityEvent onGameLost;
         
-        private readonly List<IPlant> _plants = new List<IPlant>();
+        #endregion
+        
+        private readonly List<IPlantStatus> _plantStatusList = new List<IPlantStatus>();
         private bool _gameOver;
     
-        public void RegisterPlant(IPlant plant)
+        public void RegisterPlantStatus(IPlantStatus plant)
         {
-            _plants.Add(plant);
+            _plantStatusList.Add(plant);
         }
 
         private void Update()
@@ -39,10 +43,10 @@ namespace Managers
         }
 
         private bool GameWon() => 
-            _plants
-                .Where(plant => plant.GetHealth() != PlantHealth.Dead)
-                .All(plant => plant.GetHealth() == PlantHealth.CompleteHealthy);
+            _plantStatusList
+                .Where(plant => plant.IsAlive())
+                .All(plant => plant.IsHealthy() && plant.IsDoneGrowing());
 
-        private bool GameLost() => _plants.All(plant => plant.GetHealth() == PlantHealth.Dead);
+        private bool GameLost() => _plantStatusList.All(plant => plant.IsDead());
     }
 }

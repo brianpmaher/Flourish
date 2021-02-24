@@ -15,9 +15,12 @@
       <Path>Library/PackageCache/com.unity.ide.visualstudio@2.0.5</Path>
       <Path>Library/PackageCache/com.unity.ide.vscode@1.2.3</Path>
       <Path>Library/PackageCache/com.unity.mathematics@1.1.0</Path>
+      <Path>Library/PackageCache/com.unity.sysroot.linux-x86_64@0.1.14-preview</Path>
+      <Path>Library/PackageCache/com.unity.sysroot@0.1.18-preview</Path>
       <Path>Library/PackageCache/com.unity.test-framework@1.1.22</Path>
       <Path>Library/PackageCache/com.unity.textmeshpro@3.0.1</Path>
       <Path>Library/PackageCache/com.unity.timeline@1.4.5</Path>
+      <Path>Library/PackageCache/com.unity.toolchain.win-x86_64-linux-x86_64@0.1.18-preview</Path>
       <Path>Packages</Path>
       <Path>ProjectSettings</Path>
     </explicitIncludes>
