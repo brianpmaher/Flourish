@@ -27,7 +27,7 @@ public class Draggable : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _initialSortOrder = _spriteRenderer.sortingOrder;
     }
-
+    
     private void OnMouseDown()
     {
         if (Input.GetMouseButtonDown((int) MouseButton.LeftMouse))

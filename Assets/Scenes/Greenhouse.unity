@@ -10591,6 +10591,10 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 993170651}
+    - target: {fileID: 4656635573923448451, guid: 1f6153e5f272ff6429a38cac169c22f2, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 993170651}
     - target: {fileID: 4886492242083602474, guid: 1f6153e5f272ff6429a38cac169c22f2, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -10661,6 +10665,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1227659721}
     m_Modifications:
+    - target: {fileID: 3875460508000333299, guid: fdb4ec0cab62f1d499e47f9846a3f777, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 993170651}
     - target: {fileID: 3929277840038939482, guid: fdb4ec0cab62f1d499e47f9846a3f777, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -10954,6 +10962,10 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 993170651}
+    - target: {fileID: 4656635573923448451, guid: 1f6153e5f272ff6429a38cac169c22f2, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 993170651}
     - target: {fileID: 4886492242083602474, guid: 1f6153e5f272ff6429a38cac169c22f2, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -11212,6 +11224,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1227659721}
     m_Modifications:
+    - target: {fileID: 3875460508000333299, guid: fdb4ec0cab62f1d499e47f9846a3f777, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 993170651}
     - target: {fileID: 3929277840038939482, guid: fdb4ec0cab62f1d499e47f9846a3f777, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -12225,7 +12241,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 5271657981950307655}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a74d6285facf401497a51d21c80b9c5c, type: 3}
   m_Name: 
@@ -12373,6 +12389,10 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 993170651}
+    - target: {fileID: 4656635573923448451, guid: 1f6153e5f272ff6429a38cac169c22f2, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 993170651}
     - target: {fileID: 4886492242083602474, guid: 1f6153e5f272ff6429a38cac169c22f2, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -12443,6 +12463,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1227659721}
     m_Modifications:
+    - target: {fileID: 56221970208985407, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 993170651}
     - target: {fileID: 254526194175637398, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -12671,6 +12695,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1227659721}
     m_Modifications:
+    - target: {fileID: 56221970208985407, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 993170651}
     - target: {fileID: 254526194175637398, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -13009,6 +13037,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1227659721}
     m_Modifications:
     - target: {fileID: 2572602692340118297, guid: 1f6153e5f272ff6429a38cac169c22f2, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 993170651}
+    - target: {fileID: 4656635573923448451, guid: 1f6153e5f272ff6429a38cac169c22f2, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 993170651}
@@ -13444,6 +13476,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1227659721}
     m_Modifications:
+    - target: {fileID: 56221970208985407, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 993170651}
     - target: {fileID: 254526194175637398, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -13868,6 +13904,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1227659721}
     m_Modifications:
+    - target: {fileID: 56221970208985407, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 993170651}
     - target: {fileID: 254526194175637398, guid: 82b4d2c14d698954e8cc2fa83c64eee1, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -14290,6 +14330,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1227659721}
     m_Modifications:
+    - target: {fileID: 3875460508000333299, guid: fdb4ec0cab62f1d499e47f9846a3f777, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 993170651}
     - target: {fileID: 3929277840038939482, guid: fdb4ec0cab62f1d499e47f9846a3f777, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -14863,7 +14907,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5271657982574377372, guid: 4f45e19ee32cdbe4b84e703611a0ef02, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5271657982574377372, guid: 4f45e19ee32cdbe4b84e703611a0ef02, type: 3}
       propertyPath: onGameWon.m_PersistentCalls.m_Calls.Array.data[0].m_Target

@@ -31,8 +31,8 @@ namespace Plant
         private float _age;
 
         public bool IsSeedling => stage == Seedling;
+        public bool IsFinalStage => stage == FinalStage;
         private int FinalStage => sprites.Length - 1;
-        private bool IsFinalStage => stage == FinalStage;
 
         public void StartAging()
         {

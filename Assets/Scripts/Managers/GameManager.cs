@@ -18,12 +18,12 @@ namespace Managers
         
         #endregion
         
-        private readonly List<IPlant> _plants = new List<IPlant>();
+        private readonly List<IPlantStatus> _plantStatusList = new List<IPlantStatus>();
         private bool _gameOver;
     
-        public void RegisterPlant(IPlant plant)
+        public void RegisterPlantStatus(IPlantStatus plant)
         {
-            _plants.Add(plant);
+            _plantStatusList.Add(plant);
         }
 
         private void Update()
@@ -43,10 +43,10 @@ namespace Managers
         }
 
         private bool GameWon() => 
-            _plants
+            _plantStatusList
                 .Where(plant => plant.IsAlive())
                 .All(plant => plant.IsHealthy() && plant.IsDoneGrowing());
 
-        private bool GameLost() => _plants.All(plant => plant.IsDead());
+        private bool GameLost() => _plantStatusList.All(plant => plant.IsDead());
     }
 }
