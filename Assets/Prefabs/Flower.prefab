@@ -171,7 +171,7 @@ MonoBehaviour:
   maxHealthyNutrientLevel: 67
   nutrientIncreasePerSecond: 3
   nutrientDecreasePerSecond: 0.25
-  nutrientLevel: 50
+  nutrientLevel: 60
   nutrientDecreaseAfterNutrientAddedDelaySeconds: 0.25
   onDeath:
     m_PersistentCalls:
